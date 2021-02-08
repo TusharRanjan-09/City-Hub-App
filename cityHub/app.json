@@ -1,0 +1,12 @@
+{
+  "name": "cityHub",
+  "displayName": "cityHub",
+  "expo": {
+    "name": "cityHub",
+    "slug": "cityHub",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
