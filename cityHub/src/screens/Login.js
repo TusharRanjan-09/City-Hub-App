@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, TextInput,Dimensions } from 'react-native';
 import Input from '../components/Input';
 import SignUp from './SignUp';
 
@@ -34,12 +34,15 @@ export default function Login({ navigation }) {
         </View>
     );
 }
-
+const width = Dimensions.get('screen').width
+const height = Dimensions.get('screen').height
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         backgroundColor: '#fff',
-        paddingTop: 30
+        paddingTop: 30,
+        width: width,
+        height: height,
 
     },
     input: {
