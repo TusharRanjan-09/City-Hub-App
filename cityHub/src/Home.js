@@ -6,7 +6,7 @@ import Login from './screens/Login';
 import SignUp from './screens/SignUp';
 import Forgot from './screens/Forgot';
 import Explore from './screens/Explore';
-import Search from './components/Search';
+import Search from './components/sharedComponents/Search';
 import MyBookings from './screens/MyBookings';
 import Profile from './screens/Profile';
 import { NavigationContainer } from '@react-navigation/native';
