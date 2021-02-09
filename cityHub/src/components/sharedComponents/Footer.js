@@ -12,7 +12,7 @@ export default function Footer({ navigation }) {
     return (
         <View style={styles.container}>
              <Text style={styles.title}>Popular Categories</Text>
-                <ScrollView horizontal={true} style={{marginBottom: 101}}>
+                <ScrollView horizontal={true} style={{marginBottom: 180}}>
                     <Card1 />
                     <Card2 />
                     <Card3 />
