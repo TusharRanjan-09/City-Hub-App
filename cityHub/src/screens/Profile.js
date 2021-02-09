@@ -19,7 +19,8 @@ const toggleTheme = () => {
         <FontAwesome5 name="user-circle" size={110} style={{ marginLeft: 30, marginTop: 10 }} />
         <View style={{ flexDirection: 'column' }}>
           <Text style={{ marginHorizontal: 20, fontSize: 26, color: 'black', fontWeight: 'bold' }}>Tushar Ranjan</Text>
-          <Text style={{ marginHorizontal: 23, fontSize: 20, color: 'black', }}>user@gmail.com</Text>
+          <Text style={{ marginHorizontal: 23, fontSize: 20, color: 'darkgrey', }}>@itzTushar</Text>
+          <Text style={{ marginHorizontal: 23, fontSize: 20, color: 'darkgrey', }}>user@gmail.com</Text>
         </View>
 
       </View>
@@ -48,6 +49,7 @@ const toggleTheme = () => {
           <View style={{ flexDirection: 'row', alignItems: 'center', marginTop:10,justifyContent: 'space-between', }}>
             
             <Text style={{fontSize: 15, color :'black', marginHorizontal:10}}>Dark Theme</Text>
+         <Text>{isDarkTheme ? "ON" : "OFF"}</Text>
           <Switch value={isDarkTheme}/>
           </View>
         </TouchableOpacity>
