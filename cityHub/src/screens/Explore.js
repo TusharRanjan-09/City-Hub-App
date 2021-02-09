@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, TextInput, ImageBackground, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, TextInput, ImageBackground, ScrollView, Dimensions } from 'react-native';
 import MiniCards from '../components/MiniCards';
 import MiniCards2 from '../components/MiniCards2';
 
@@ -39,12 +39,15 @@ export default function Explore({ navigation }) {
         </View>
     );
 }
-
+const width = Dimensions.get('screen').width
+const height = Dimensions.get('screen').height
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
+        width: width,
+        height: height,
     },
     title: {
         fontSize: 40,
