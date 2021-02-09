@@ -2,7 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, ImageBackground } from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import { useNavigation, useTheme } from '@react-navigation/native';
 export default function card4({navigation}) {
+  const {colors} = useTheme()
   return (
     <View style={{alignContent: 'center',}}>  
     <TouchableOpacity>
@@ -11,7 +13,7 @@ export default function card4({navigation}) {
     </View> 
     </TouchableOpacity>
        
-        <Text style={{marginLeft: 20, color: 'black', fontWeight: 'bold'}}>Fitness</Text>
+        <Text style={{marginLeft: 20, color: colors.txt, fontWeight: 'bold'}}>Fitness</Text>
     </View>
   );
 }

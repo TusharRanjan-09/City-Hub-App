@@ -2,7 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, ImageBackground } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { useNavigation, useTheme } from '@react-navigation/native';
+import { color } from 'react-native-reanimated';
 export default function card3({navigation}) {
+  const {colors} = useTheme()
   return (
     <View style={{alignContent: 'center',paddingHorizontal:10}}> 
     <TouchableOpacity>
@@ -11,7 +14,7 @@ export default function card3({navigation}) {
     </View>  
         </TouchableOpacity> 
       
-        <Text style={{marginLeft: 5, color: 'black', fontWeight: 'bold'}}>Resturants</Text>
+        <Text style={{marginLeft: 5, color: colors.txt, fontWeight: 'bold'}}>Resturants</Text>
     </View>
   );
 }

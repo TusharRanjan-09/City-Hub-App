@@ -6,11 +6,13 @@ import Card2 from '../../cards/card2';
 import Card3 from '../../cards/card3';
 import Card4 from '../../cards/card4';
 import Card5 from '../../cards/card5';
+import { useNavigation, useTheme } from '@react-navigation/native';
 export default function Footer({ navigation }) {
+    const {colors} = useTheme()
     return (
         <View style={styles.container}>
-             <Text style={styles.title}>Popular Categories</Text>
-                <ScrollView horizontal={true} style={{marginBottom: 180}}>
+             <Text style={{fontSize: 34,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Popular Categories</Text>
+                <ScrollView horizontal={true} style={{marginBottom: 95}}>
                     <Card1 />
                     <Card2 />
                     <Card3 />

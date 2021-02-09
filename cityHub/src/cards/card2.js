@@ -2,7 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, ImageBackground } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { useNavigation, useTheme } from '@react-navigation/native';
 export default function card2({navigation}) {
+  const {colors} = useTheme()
   return (
     <View style={{alignContent: 'center',}}> 
     <TouchableOpacity>
@@ -11,7 +13,7 @@ export default function card2({navigation}) {
     </View>    
         </TouchableOpacity> 
      
-        <Text style={{marginLeft: 20, color: 'black', fontWeight: 'bold'}}>Events</Text>
+        <Text style={{marginLeft: 20, color: colors.txt, fontWeight: 'bold'}}>Events</Text>
     </View>
   );
 }
