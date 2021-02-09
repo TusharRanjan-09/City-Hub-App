@@ -1,8 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, Dimensions,ScrollView, ImageBackground, Image } from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Card1 from '../../cards/card1';
 import Card2 from '../../cards/card2';
 import Card3 from '../../cards/card3';
@@ -26,7 +24,7 @@ const width = Dimensions.get('screen').width
 const height = Dimensions.get('screen').height
 const styles = StyleSheet.create({
     container: {
-        margin: 8
+        
     },
     title: {
         fontSize: 34,
