@@ -21,7 +21,6 @@ const RootHome = () => {
         <Tabs.Navigator
             screenOptions={({ route }) => ({
                 tabBarIcon: ({ color }) => {
-
                     let iconName;
                     if (route.name === 'Explore') {
                         iconName = 'explore';
@@ -33,7 +32,6 @@ const RootHome = () => {
                         iconName = 'supervised-user-circle';
                     }
                     return <MaterialIcons name={iconName} size={32} color={color} />;
-
                 },
             })}
             tabBarOptions={{
