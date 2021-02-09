@@ -9,14 +9,41 @@ import Explore from './screens/Explore';
 import Search from './components/sharedComponents/Search';
 import MyBookings from './screens/MyBookings';
 import Profile from './screens/Profile';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DarkTheme, DefaultTheme, useTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Bookmarks from './screens/Bookmarks';
 const Stack = createStackNavigator();
 const Tabs = createBottomTabNavigator()
+const customDarkTheme ={
+    ...DarkTheme,
+    colors: {
+        ...DarkTheme.colors,
+        headerColor: 'black',
+        iconColor:'white',
+        tabIcon: 'white',
+        backGround: 'black',
+        txt: 'white',
+        profile: 'black',
+        iconCategory: 'white'
+    }
+}
+const customDefaultTheme ={
+    ...DefaultTheme,
+    colors: {
+        ...DefaultTheme.colors,
+        headerColor: 'white',
+        iconColor:'black',
+        tabIcon: 'black',
+        backGround: 'white',
+        txt: 'black',
+        profile: 'white',
+        iconCategory: '#5dade2'
+    }
+}
 const RootHome = () => {
+    const {colors} = useTheme()
     return (
         <Tabs.Navigator
             screenOptions={({ route }) => ({
@@ -35,8 +62,8 @@ const RootHome = () => {
                 },
             })}
             tabBarOptions={{
-                activeTintColor: 'red',
-                inactiveTintColor: 'black',
+                activeTintColor: colors.tabIcon,
+                inactiveTintColor: 'grey',
             }}
         >
             <Tabs.Screen name="Explore" component={Explore} />
@@ -48,7 +75,7 @@ const RootHome = () => {
 }
 function Home() {
     return (
-        <NavigationContainer>
+        <NavigationContainer theme={customDefaultTheme}>
             <Stack.Navigator headerMode="none">
 
                 <Stack.Screen name="Login" component={Login} />
