@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Login from './screens/Login';
 import SignUp from './screens/SignUp';
@@ -16,6 +16,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Bookmarks from './screens/Bookmarks';
 const Stack = createStackNavigator();
 const Tabs = createBottomTabNavigator()
+import { EventRegister } from 'react-native-event-listeners'
 const customDarkTheme ={
     ...DarkTheme,
     colors: {
@@ -42,8 +43,9 @@ const customDefaultTheme ={
         iconCategory: '#5dade2'
     }
 }
+
 const RootHome = () => {
-    const {colors} = useTheme()
+    const {colors} = useTheme()  
     return (
         <Tabs.Navigator
             screenOptions={({ route }) => ({
@@ -74,8 +76,19 @@ const RootHome = () => {
     )
 }
 function Home() {
+    const [dark, setDark] = useState(false)
+    const appTheme = dark ? customDarkTheme : customDefaultTheme;
+    useEffect(()=> {
+        let eventListener = EventRegister.addEventListener('ChangeThemeEvent',
+         (data) => {         
+           setDark(data)
+        })
+    return () => {
+   true;
+    };
+    },[]);
     return (
-        <NavigationContainer theme={customDefaultTheme}>
+        <NavigationContainer theme={appTheme}>
             <Stack.Navigator headerMode="none">
 
                 <Stack.Screen name="Login" component={Login} />

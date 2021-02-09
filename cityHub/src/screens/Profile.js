@@ -6,6 +6,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Feather from 'react-native-vector-icons/Feather';
 import { useNavigation, useTheme } from '@react-navigation/native';
+import { EventRegister } from 'react-native-event-listeners'
 export default function Profile() {
   const navigation = useNavigation();
   const [isDarkTheme, setISDarkTheme]= useState(false);
@@ -45,16 +46,21 @@ const toggleTheme = () => {
             <Text style={{fontSize: 15, color :colors.txt, marginHorizontal:10}}>Settings</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={{margin: 10, paddingLeft:2,borderTopWidth: 1,borderTopColor:'#f4f4f4',}}
-        onPress={()=> {toggleTheme()}}
+        <View style={{margin: 10, paddingLeft:2,borderTopWidth: 1,borderTopColor:'#f4f4f4',}}
+       
         >
           <View style={{ flexDirection: 'row', alignItems: 'center', marginTop:10,justifyContent: 'space-between', }}>
             
             <Text style={{fontSize: 15, color :colors.txt, marginHorizontal:10}}>Dark Theme</Text>
          <Text style={{color: colors.txt }}>{isDarkTheme ? "ON" : "OFF"}</Text>
-          <Switch value={isDarkTheme}/>
+          <Switch value={isDarkTheme}
+           onValueChange={val => {
+            setISDarkTheme(val);
+            EventRegister.emit('ChangeThemeEvent', val)
+          }}
+          />
           </View>
-        </TouchableOpacity>
+        </View>
         <TouchableOpacity style={{margin: 10, paddingLeft:2,borderTopWidth: 1,borderTopColor:'#f4f4f4',}}
         onPress={() => navigation.navigate("Login")}
         >
