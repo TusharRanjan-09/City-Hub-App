@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity,Dimensions } from 'react-native';
 import Input from '../components/Input';
 import Entypo from 'react-native-vector-icons/Entypo';
 export default function SignUp({ navigation }) {
@@ -20,7 +20,7 @@ export default function SignUp({ navigation }) {
                         <Text style={styles.btntxt}>SIGN Up</Text>
                     </TouchableOpacity>
                     <View style={{ marginTop: 80 }}>
-                        <Text style={{ fontSize: 15 }}> By clicking Sign Up you agree to the following</Text>
+                        <Text style={{ fontSize: 15 }}>   By clicking Sign Up you agree to the following</Text>
                         <TouchableOpacity >
                             <Text style={{ fontSize: 18, color: 'black', marginLeft: 55 }}>Terms and Conditions</Text>
                         </TouchableOpacity>
@@ -33,12 +33,16 @@ export default function SignUp({ navigation }) {
         </View>
     );
 }
-
+const width = Dimensions.get('screen').width
+const height = Dimensions.get('screen').height
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         backgroundColor: '#fff',
-        alignItems: 'center',
+        paddingTop: 30,
+        width: width,
+        height: height,
+        paddingHorizontal: 30
     },
     txt: {
         fontSize: 39,
