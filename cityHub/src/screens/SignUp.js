@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity,Dimensions } from 'react-native';
-import Input from '../components/Input';
+import Input from '../components/sharedComponents/Input';
 import Entypo from 'react-native-vector-icons/Entypo';
 export default function SignUp({ navigation }) {
     const [tt, setTt] = useState({ email: 'Email', pass: 'Password', user: 'UserName' })

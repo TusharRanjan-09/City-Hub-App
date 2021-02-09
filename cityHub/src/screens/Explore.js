@@ -4,16 +4,13 @@ import { StyleSheet,SafeAreaView, Text, View, TouchableOpacity, TextInput, Image
 import MiniCards from '../components/MiniCards';
 import MiniCards2 from '../components/MiniCards2';
 
-import Card1 from '../cards/card1';
-import Card2 from '../cards/card2';
-import Card3 from '../cards/card3';
-import Card4 from '../cards/card4';
-import Card5 from '../cards/card5';
+
 import Category from '../components/sharedComponents/categoryCarousel';
 import OfferBanner from '../components/sharedComponents/offerBanner';
 import CardCarousel from '../components/sharedComponents/cardCarousel';
 import CardItems from '../components/sharedComponents/cardItems';
 import IconCategory from '../components/sharedComponents/IconCategory';
+import Footer from '../components/sharedComponents/Footer';
 import Search from "../components/sharedComponents/Search";
 export default function Explore({ navigation }) {
     return (
@@ -56,14 +53,7 @@ export default function Explore({ navigation }) {
                   <IconCategory/>
                   <IconCategory/>
                 </ScrollView>
-                <Text style={styles.title}>Popular Categories</Text>
-                <ScrollView horizontal={true} style={{marginBottom: 101}}>
-                    <Card1 />
-                    <Card2 />
-                    <Card3 />
-                    <Card4 />
-                    <Card5 />
-                </ScrollView>
+               <Footer/>
               
             </ScrollView>
         </SafeAreaView>

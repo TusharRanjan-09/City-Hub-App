@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput,Dimensions } from 'react-native';
-import Input from '../components/Input';
+import Input from '../components/sharedComponents/Input';
 import SignUp from './SignUp';
 
 export default function Login({ navigation }) {
