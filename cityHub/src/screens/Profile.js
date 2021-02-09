@@ -51,7 +51,7 @@ const toggleTheme = () => {
           <View style={{ flexDirection: 'row', alignItems: 'center', marginTop:10,justifyContent: 'space-between', }}>
             
             <Text style={{fontSize: 15, color :colors.txt, marginHorizontal:10}}>Dark Theme</Text>
-         <Text>{isDarkTheme ? "ON" : "OFF"}</Text>
+         <Text style={{color: colors.txt }}>{isDarkTheme ? "ON" : "OFF"}</Text>
           <Switch value={isDarkTheme}/>
           </View>
         </TouchableOpacity>
