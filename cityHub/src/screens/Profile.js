@@ -12,10 +12,10 @@ export default function Profile() {
   const [isDarkTheme, setISDarkTheme]= useState(false);
   const {colors} = useTheme()
   const myColor = colors.iconColor
-const toggleTheme = () => {
+// const toggleTheme = () => {
     
- setISDarkTheme(!isDarkTheme)
-}
+//  setISDarkTheme(!isDarkTheme)
+// }
   return (
     <View style={{flex: 1, backgroundColor: colors.iconColor}}>
       <View style={{ flex: 2.5, backgroundColor: colors.profile, borderBottomWidth: 1,borderBottomColor:'#f4f4f4', alignContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
