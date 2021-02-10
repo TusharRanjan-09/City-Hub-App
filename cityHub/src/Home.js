@@ -6,7 +6,7 @@ import Login from './screens/Login';
 import SignUp from './screens/SignUp';
 import Forgot from './screens/Forgot';
 import Explore from './screens/Explore';
-import Search from './components/sharedComponents/Search';
+import Gyms from './screens/Gyms';
 import MyBookings from './screens/MyBookings';
 import Profile from './screens/Profile';
 import { NavigationContainer, DarkTheme, DefaultTheme, useTheme } from '@react-navigation/native';
@@ -98,6 +98,7 @@ function Home() {
                 <Stack.Screen name="Explore" component={RootHome} />
                 <Stack.Screen name="Prof" component={Profile} />
                 <Stack.Screen name="Hotels" component={Hotels} />
+                <Stack.Screen name="Gyms" component={Gyms} />
 
             </Stack.Navigator>
         </NavigationContainer>

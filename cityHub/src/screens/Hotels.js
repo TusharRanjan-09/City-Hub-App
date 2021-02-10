@@ -94,25 +94,27 @@ const Hotels = () => {
     const navigation = useNavigation();
     const myColor = colors.txt
     return (
-        <SafeAreaView style={{backgroundColor: colors.headerColor}}>
+        <SafeAreaView style={{ backgroundColor: colors.headerColor }}>
             <View >
-                <View style={{backgroundColor: colors.headerColor, flexDirection: 'row', alignItems: 'center',}}>
-                <TouchableOpacity onPress={() => navigation.navigate("Explore")} style={{backgroundColor : colors.headerColor, PaddingTop:20}}>
-                    <Ionicons name="arrow-back" size={28} color={myColor} style={{ paddingLeft: 2 , marginTop: 22}} />
-                </TouchableOpacity>
-                <Text style={{color: colors.txt, marginLeft : '36%', fontSize: 24, marginTop: 19}}>Hotels</Text>
-                </View>              
+                <View style={{ backgroundColor: colors.headerColor, flexDirection: 'row', alignItems: 'center', }}>
+                    <TouchableOpacity onPress={() => navigation.navigate("Explore")} style={{ backgroundColor: colors.headerColor, PaddingTop: 20 }}>
+                        <Ionicons name="arrow-back" size={28} color={myColor} style={{ paddingLeft: 2, marginTop: 22 }} />
+                    </TouchableOpacity>
+                    <Text style={{ color: colors.txt, marginLeft: '36%', fontSize: 24, marginTop: 19 }}>Hotels</Text>
+                </View>
                 <FlatList
                     data={DATA}
                     renderItem={
-                        ({ item }) => (<View style={{ flexDirection: 'row', borderWidth: 2, margin: 10, borderColor: colors.txt }}>
-                            <Image source={{ uri: item.uri }} style={{ width: 120, height: 120 }} />
-                            <View style={{ flexDirection: 'column', marginHorizontal: 10, marginTop: 10 }}>
-                                <Text style={{ color: colors.txt, fontSize: 20, fontWeight: 'bold' }}>{item.title}</Text>
-                                <Text style={{ color: colors.txt, fontSize: 18, width: 250 }} ellipsizeMode="tail" numberOfLines={2}>{item.address}</Text>
-                                <Text style={{ color: colors.txt, fontSize: 18 }}>{item.contact}</Text>
+                        ({ item }) => (<TouchableOpacity>
+                            <View style={{ flexDirection: 'row', borderWidth: 2, margin: 10, borderColor: colors.txt }}>
+                                <Image source={{ uri: item.uri }} style={{ width: 120, height: 120 }} />
+                                <View style={{ flexDirection: 'column', marginHorizontal: 10, marginTop: 10 }}>
+                                    <Text style={{ color: colors.txt, fontSize: 20, fontWeight: 'bold' }}>{item.title}</Text>
+                                    <Text style={{ color: colors.txt, fontSize: 18, width: 250 }} ellipsizeMode="tail" numberOfLines={2}>{item.address}</Text>
+                                    <Text style={{ color: colors.txt, fontSize: 18 }}>{item.contact}</Text>
+                                </View>
                             </View>
-                        </View>
+                        </TouchableOpacity>
                         )
                     }
                     keyExtractor={item => item.id}
