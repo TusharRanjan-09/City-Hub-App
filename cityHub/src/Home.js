@@ -30,7 +30,7 @@ const customDarkTheme ={
         txt: 'white',
         profile: 'black',
         iconCategory: 'white',
-        book: 'white'
+        book: 'orange'
     }
 }
 const customDefaultTheme ={
