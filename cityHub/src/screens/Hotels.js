@@ -2,7 +2,6 @@ import React from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Image, TouchableOpacity } from 'react-native';
 import { useNavigation, useTheme } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
 const DATA = [
     {
         id: '1',
@@ -90,7 +89,7 @@ const DATA = [
     },
 ];
 
-const Hotels = () => {
+const Hotels = () => {   
     const { colors } = useTheme()
     const navigation = useNavigation();
     const myColor = colors.txt

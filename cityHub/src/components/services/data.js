@@ -1,6 +1,7 @@
 import React from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Image } from 'react-native';
 import Hotels from '../../screens/Hotels';
+import Explore from '../../screens/Explore';
 const DATA = [
   {
     id: '1',
@@ -16,7 +17,7 @@ const DATA = [
     title: 'Third Item',
   },
 ];
-
+// console.warn(DATA)
 // const Item = ({ title }) => (
 //   <View >
 //     <Text >{title}</Text>
@@ -30,26 +31,8 @@ const Practice = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-        <View style={{flexDirection: 'row'}}>
-        {/* <FlatList
-        data={DATA}
-        renderItem={
-            ({ item }) => {
-                return<Hotels
-                tit= {item.title}
-                iD = {item.id}
-                img= {item.uri}
-                />
-            }
-//             (<View style={{flexDirection: 'row'}}>
-// <Text>{item.title}</Text>   
-// <Image source={{uri: item.uri}} style={{width: 100, height:100}}/>   
-//             </View>
-                     
-//               ) 
-        }
-        keyExtractor={item => item.id}
-      /> */}
+        <View >
+       <Explore itm={DATA}/>
         </View>
      
     </SafeAreaView>

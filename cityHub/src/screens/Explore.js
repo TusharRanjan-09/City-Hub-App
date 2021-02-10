@@ -4,7 +4,7 @@ import { StyleSheet,SafeAreaView, Text, View, TouchableOpacity, TextInput, Image
 import Carousel from '../components/sharedComponents/Carousel';
 import Search from "../components/sharedComponents/Search";
 import { useNavigation, useTheme } from '@react-navigation/native';
-export default function Explore({ navigation }) {
+export default function Explore() {
     const {colors} = useTheme()
     return (
         <SafeAreaView style={{backgroundColor: colors.backGround, alignItems: 'center',width: '100%',height: '100%',}}>
