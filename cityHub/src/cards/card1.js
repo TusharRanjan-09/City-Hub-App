@@ -3,11 +3,12 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, ImageBackground } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { useNavigation, useTheme } from '@react-navigation/native';
-export default function card1({navigation}) {
+export default function card1() {
   const {colors} = useTheme()
+  const navigation = useNavigation();
   return (
     <View style={{alignContent: 'center',paddingHorizontal:10}}>  
-    <TouchableOpacity>
+    <TouchableOpacity onPress={()=> navigation.navigate('Hotels')}>
     <View style={styles.container}>
     <FontAwesome name="hotel" size={44} color="white" />
     </View>   

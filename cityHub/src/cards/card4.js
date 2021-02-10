@@ -3,11 +3,12 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, ImageBackground } from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { useNavigation, useTheme } from '@react-navigation/native';
-export default function card4({navigation}) {
+export default function card4() {
   const {colors} = useTheme()
+  const navigation = useNavigation();
   return (
     <View style={{alignContent: 'center',}}>  
-    <TouchableOpacity>
+    <TouchableOpacity onPress={()=> navigation.navigate('Gyms')}>
     <View style={styles.container}>
     <FontAwesome5 name="dumbbell" size={40} color="white" />
     </View> 

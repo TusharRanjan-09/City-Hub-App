@@ -9,6 +9,7 @@ import Explore from './screens/Explore';
 import Gyms from './screens/Gyms';
 import MyBookings from './screens/MyBookings';
 import Profile from './screens/Profile';
+import Shops from './screens/Shops';
 import { NavigationContainer, DarkTheme, DefaultTheme, useTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -99,6 +100,7 @@ function Home() {
                 <Stack.Screen name="Prof" component={Profile} />
                 <Stack.Screen name="Hotels" component={Hotels} />
                 <Stack.Screen name="Gyms" component={Gyms} />
+                <Stack.Screen name="Shops" component={Shops} />
 
             </Stack.Navigator>
         </NavigationContainer>

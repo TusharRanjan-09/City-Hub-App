@@ -3,11 +3,12 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, ImageBackground } from 'react-native';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import { useNavigation, useTheme } from '@react-navigation/native';
-export default function card5({navigation}) {
+export default function card5() {
   const {colors} = useTheme()
+  const navigation = useNavigation();
   return (
-    <View style={{alignContent: 'center',paddingHorizontal:10}}>  
-    <TouchableOpacity>
+    <View style={{alignContent: 'center',paddingRight:10}}>  
+    <TouchableOpacity onPress={()=> navigation.navigate("Shops")}>
     <View style={styles.container}>
     <Fontisto name="shopify" size={46} color="white" />
     </View>    

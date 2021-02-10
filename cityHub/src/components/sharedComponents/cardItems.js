@@ -3,11 +3,12 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, Dimensions, ImageBackground, Image } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-
-export default function cardItems({ navigation }) {
+import { useNavigation, useTheme } from '@react-navigation/native';
+export default function cardItems() {
+    const navigation = useNavigation();
     return (
         <View style={styles.container}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=> navigation.navigate('Shops')}>
                 <View style={{ backgroundColor: '#fc5373', alignItems: 'center', width: width - 94, height: height - 650, borderRadius: 30, flexDirection: 'row', borderWidth: 2 }}>
                     <Image source={{ uri: 'https://imgcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2017/03/29132939/290317BanjaranMarket%40GGN13.jpg?w=1200&h=628&fill=blur&fit=fill' }}
                         style={{ width: width - 280, height: height - 654, borderTopLeftRadius: 30, borderBottomLeftRadius: 30 }}
