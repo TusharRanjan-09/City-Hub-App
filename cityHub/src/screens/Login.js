@@ -13,7 +13,7 @@ export default function Login({ navigation }) {
             <Text style={styles.input}>Welcome back!</Text>
             <View style={styles.inpview}>
                 <TextInput placeholder={tt.email} style={{ width: 330, height: 60, borderBottomColor: 'lightgrey', borderBottomWidth: 1, fontSize: 20 }} />
-                <TextInput placeholder={tt.pass} style={{ width: 330, height: 60, borderBottomColor: 'lightgrey', borderBottomWidth: 1, fontSize: 20 }} />
+                <TextInput placeholder={tt.pass} style={{ width: 330, height: 60, borderBottomColor: 'lightgrey', borderBottomWidth: 1, fontSize: 20 }} secureTextEntry={true}/>
                 {/* <Input email={tt}/>   */}
             </View>
             <TouchableOpacity style={styles.inpvieww} onPress={() => navigation.navigate("Forgot")}>
