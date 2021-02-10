@@ -8,14 +8,13 @@ export default function cardCarousel({navigation}) {
   return (
     <View style={styles.container}>
         <TouchableOpacity>
-        <View style={{ backgroundColor: '#5dade2',borderWidth:1,borderColor: 'black', alignItems:'center', width: width-170, height: height-600, borderRadius: 30}}>
+        <View style={{ backgroundColor: '#5dade2',borderWidth:1,borderColor: 'black', alignItems:'center', width: width-164.5, borderRadius: 30, height: height-600, }}>
       <Image source={{uri: 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/273753077.webp?k=c4c2895f210b2bdaf9e220e82f99d4cdc97e344063f048380562554d1a83e3c6&o='}}
-      style={{ width: width-170, height: height-699, borderTopLeftRadius:30, borderTopRightRadius: 30}}
+      style={{ width: width-166.5, height: height-699, borderTopLeftRadius:30, borderTopRightRadius: 30}}
       />
       <Text style={{color: 'white', fontWeight: 'bold', fontSize: 28}}>Holiday Inn</Text>
        <Text style={{fontSize: 15, paddingHorizontal: 5, margin:3, color: 'white'}}>Aesthetically designed rooms,</Text>
        <Text style={{fontSize: 15, color: 'white'}}>Comfortable budget stay !</Text>
-
         </View>
         </TouchableOpacity>    
     </View>
@@ -25,8 +24,6 @@ const width = Dimensions.get('screen').width
 const height = Dimensions.get('screen').height
 const styles = StyleSheet.create({
   container: {
-//    flex: 1,
-    // backgroundColor: '#fff',
    margin: 10
   },
  
