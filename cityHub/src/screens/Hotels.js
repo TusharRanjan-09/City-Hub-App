@@ -2,6 +2,7 @@ import React from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Image, TouchableOpacity } from 'react-native';
 import { useNavigation, useTheme } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+
 const DATA = [
     {
         id: '1',
@@ -93,6 +94,7 @@ const Hotels = () => {
     const { colors } = useTheme()
     const navigation = useNavigation();
     const myColor = colors.txt
+    const bookColor = colors.book
     return (
         <SafeAreaView style={{ backgroundColor: colors.headerColor }}>
             <View >
@@ -113,6 +115,7 @@ const Hotels = () => {
                                     <Text style={{ color: colors.txt, fontSize: 18, width: 250 }} ellipsizeMode="tail" numberOfLines={2}>{item.address}</Text>
                                     <Text style={{ color: colors.txt, fontSize: 18 }}>{item.contact}</Text>
                                 </View>
+                                <Ionicons name="ios-bookmark-outline" size={40} color={bookColor} style={{position: 'absolute', marginLeft:330}} />
                             </View>
                         </TouchableOpacity>
                         )

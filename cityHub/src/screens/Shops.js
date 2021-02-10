@@ -52,6 +52,7 @@ const Shops = () => {
     const { colors } = useTheme()
     const navigation = useNavigation();
     const myColor = colors.txt
+    const bookColor = colors.book
     return (
         <SafeAreaView style={{backgroundColor: colors.headerColor}}>
             <View >
@@ -73,6 +74,7 @@ const Shops = () => {
                                 <Text style={{ color: colors.txt, fontSize: 18, width: 250 }} ellipsizeMode="tail" numberOfLines={2}>{item.address}</Text>
                                 <Text style={{ color: colors.txt, fontSize: 18 }}>{item.contact}</Text>
                             </View>
+                            <Ionicons name="ios-bookmark-outline" size={40} color={bookColor} style={{position: 'absolute', marginLeft:330}} />
                             </View>
                             </TouchableOpacity>
                             

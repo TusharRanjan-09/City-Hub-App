@@ -29,7 +29,8 @@ const customDarkTheme ={
         backGround: 'black',
         txt: 'white',
         profile: 'black',
-        iconCategory: 'white'
+        iconCategory: 'white',
+        book: 'white'
     }
 }
 const customDefaultTheme ={
@@ -42,7 +43,8 @@ const customDefaultTheme ={
         backGround: 'white',
         txt: 'black',
         profile: 'white',
-        iconCategory: '#5dade2'
+        iconCategory: '#5dade2',
+        book: 'blue'
     }
 }
 
