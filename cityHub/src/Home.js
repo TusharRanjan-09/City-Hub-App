@@ -14,6 +14,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Bookmarks from './screens/Bookmarks';
+import Hotels from './screens/Hotels';
 const Stack = createStackNavigator();
 const Tabs = createBottomTabNavigator()
 import { EventRegister } from 'react-native-event-listeners'
@@ -96,6 +97,7 @@ function Home() {
                 <Stack.Screen name="Forgot" component={Forgot} />
                 <Stack.Screen name="Explore" component={RootHome} />
                 <Stack.Screen name="Prof" component={Profile} />
+                <Stack.Screen name="Hotels" component={Hotels} />
 
             </Stack.Navigator>
         </NavigationContainer>
