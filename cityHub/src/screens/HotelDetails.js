@@ -29,7 +29,7 @@ const HotelDetails = (props) => {
             <View style={{ flex: 6.5, backgroundColor: colors.details, padding: 10, borderTopLeftRadius: 40, borderTopRightRadius: 40 }}>
                <View style={{flexDirection: 'row', alignItems: 'center'}}>
                <Entypo name="location-pin" size={28} color={bookColor} />  
-               <Text style={{fontSize: 16, color: 'lightgrey'}}>{props.route.params.address}</Text>
+               <Text style={{fontSize: 16, color: colors.txt}}>{props.route.params.address}</Text>
                </View>
                
                 <Text style={{ color: colors.txt, fontSize: 25, fontWeight: 'bold', marginBottom:5 }}>{props.route.params.title}</Text>
@@ -45,25 +45,25 @@ const HotelDetails = (props) => {
                <View style={{flexDirection: 'row', justifyContent:'space-around'}}>
                <View style={{flexDirection: 'column'}}>
                <FontAwesome5 name="award" size={28} color={myColor} style={{ paddingLeft: 2, marginTop: 22 }} />
-               <Text style={{width: 170, color: colors.txt}}>Won Awards for Good Customer Services.</Text>
+               <Text style={{width: 170, color: colors.txt,fontSize: 18}}>Won Awards for Good Customer Services.</Text>
                </View>
                
                
                <View style={{flexDirection: 'column'}}>
                <Ionicons name="people" size={28} color={myColor} style={{ paddingLeft: 2, marginTop: 22 }} />
-                   <Text style={{width: 170, color: colors.txt}}>Happy Customers Every year</Text>
+                   <Text style={{width: 170, color: colors.txt, fontSize: 18}}>Happy Customers Every year</Text>
                    <Text style={{color:colors.book, fontSize :20}}>{props.route.params.customers}</Text>
                </View>
                </View>
                <View style={{flexDirection: 'row', alignItems: 'center', alignContent: 'center'}}>
                <MaterialIcons name="sanitizer" size={28} color={myColor} style={{ paddingLeft: 2, marginTop: 22 }} />
-               <Text style={{color: 'red', marginTop: 20, width: 340, marginLeft: 5}}>Sanatized Before Your Eyes | Contactless Check-In | All staffs temp checked </Text>
+               <Text style={{color: 'red', marginTop: 20, width: 340, marginLeft: 5,fontSize: 17}}>Sanatized Before Your Eyes | Contactless Check-In | All staffs temp checked </Text>
                </View>
                
-               <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop:89}}>
+               <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop:66}}>
                    <View style={{flexDirection: 'column'}}>
                   
-               <Text style={{fontSize:20,marginLeft:22, fontWeight: 'bold', color: 'white'}}>{props.route.params.cost}</Text>
+               <Text style={{fontSize:20,marginLeft:22, fontWeight: 'bold', color: colors.cost}}>{props.route.params.cost}</Text>
                <Text style={{fontSize:20, color: colors.txt,}}>Total Amount</Text>
                    </View>
              

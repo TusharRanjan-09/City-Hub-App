@@ -11,6 +11,7 @@ import MyBookings from './screens/MyBookings';
 import Profile from './screens/Profile';
 import Shops from './screens/Shops';
 import HotelDetails from './screens/HotelDetails';
+import ShopsDetails from './screens/ShopsDetails';
 import { NavigationContainer, DarkTheme, DefaultTheme, useTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -33,7 +34,8 @@ const customDarkTheme ={
         iconCategory: 'white',
         book: 'orange',
         gps: 'white',
-        details: 'black'
+        details: 'black',
+        cost: 'white'
     }
 }
 const customDefaultTheme ={
@@ -48,8 +50,9 @@ const customDefaultTheme ={
         profile: 'white',
         iconCategory: '#5dade2',
         book: 'blue',
-        gps: 'white',
-        details: '#65c1fa'
+        gps: 'black',
+        details: '#65c1fa',
+        cost: 'red'
     }
 }
 
@@ -109,6 +112,8 @@ function Home() {
                 <Stack.Screen name="Gyms" component={Gyms} />
                 <Stack.Screen name="Shops" component={Shops} />
                 <Stack.Screen name="Hotel" component={HotelDetails} />
+                <Stack.Screen name="ShopsDetails" component={ShopsDetails} />
+
 
             </Stack.Navigator>
         </NavigationContainer>
