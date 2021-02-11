@@ -6,7 +6,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Feather from 'react-native-vector-icons/Feather';
-
+import Communications from 'react-native-communications';
 
 const ShopsDetails = (props) => {
     const { colors } = useTheme()
@@ -51,7 +51,9 @@ const ShopsDetails = (props) => {
                         <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 18, margin: 5 }}>Get Direction</Text>
                         <FontAwesome5 name="directions" size={28} color='white' />
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ elevation: 5, width: 180, height: 50, borderRadius: 30, justifyContent: 'center', alignItems: 'center', backgroundColor: 'orange', flexDirection: 'row', marginLeft: 10 }}>
+                    <TouchableOpacity style={{ elevation: 5, width: 180, height: 50, borderRadius: 30, justifyContent: 'center', alignItems: 'center', backgroundColor: 'orange', flexDirection: 'row', marginLeft: 10 }}
+                    onPress={()=> Communications.phonecall('9999999999', true)}
+                    >
                         <Text style={{ color: colors.txt, fontSize: 18, margin: 5, fontWeight: 'bold' }}>Call Now</Text>
                         <Feather name="phone-call" size={28} color='white' />
                     </TouchableOpacity>
