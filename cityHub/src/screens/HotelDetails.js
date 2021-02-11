@@ -7,7 +7,6 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-
 const HotelDetails = (props) => {
     const { colors } = useTheme()
     const navigation = useNavigation();
