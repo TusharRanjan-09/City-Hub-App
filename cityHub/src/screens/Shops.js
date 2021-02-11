@@ -15,6 +15,7 @@ const DATA = [
         color4: 'orange',
         color5: 'white',
         reviews: '11,276 Reviews',
+        des: 'Ambience Mall, Gurgaon is a shopping mall in Gurgaon, Haryana, India. It contains a built-up area of 21 lakhs square feet and a retail area of 18 lakhs square feet. Most floors have a shopping area of 860 meters.'
 
     },
     {
@@ -29,12 +30,13 @@ const DATA = [
         color4: 'orange',
         color5: 'orange',
         reviews: '21,768 Reviews',
+        des: 'MGF Metropolis Mall has been located at MG Road, Gurgaon and is extremely close to high affluent residential complexes. This commercial project has been given an extremely futuristic look with tons of external design elements decorating the exterior. MGF Metropolis Mall is made entirely of glass and metal and, as a show of excellence in design.'
     },
     {
         id: '3',
         title: 'Banjara Market',
         uri: 'https://th.bing.com/th/id/OIP.WfafU81VfcUt244Ceqx5YwHaEK?pid=Api&rs=1',
-        address: '72, Sector-23, New Palam Vihar, Rohtak, Haryana',
+        address: '72, Sector-56, New Palam Vihar, Rohtak, Haryana',
         contact: 'Ph no.- 9999999999',
         color1: 'orange',
         color2: 'orange',
@@ -42,6 +44,7 @@ const DATA = [
         color4: 'orange',
         color5: 'white',
         reviews: '32,426 Reviews',
+        des: 'Banjara market, as the name suggests is the flea market, which is in sector 56 of Gurgaon has grabbed its attention for its home decor products. It’s the best place to shop home decor items, furniture, accessories, photo frames, bar tables, pots, stools of various sizes and a lot more at the affordable price.'
     },
     {
         id: '4',
@@ -55,6 +58,7 @@ const DATA = [
         color4: 'orange',
         color5: 'orange',
         reviews: '9,765 Reviews',
+        des: 'Being one of the oldest markets in Gurgaon, Vyapar Kendra has been the go-to hub for everything affordable! From clothes, food and accessories to kitchenware, home essentials and affordable services, Vyapar Kendra has it all. Its a big market and you are bound to get lost at least once here'
     },
     {
         id: '5',
@@ -68,6 +72,7 @@ const DATA = [
         color4: 'white',
         color5: 'white',
         reviews: '15,245 Reviews',
+        des: 'Sahara Mall is a high-end shopping mall in the industrial city of Gurgaon. One of the oldest in the city, it is a vast mall flooded with national and international brands. Visit this mall with your friends and loved ones and shop what you want. Be it clothes, shoes, accessories or electronic items, you are sure to get something of your choice.'
     },
     {
         id: '6',
@@ -81,6 +86,7 @@ const DATA = [
         color4: 'orange',
         color5: 'white',
         reviews: '11,276 Reviews',
+        des: 'Sadar Bazaar is the largest wholesale cosmetics jewellery market of household items in Delhi, India. Like other major markets of Old Delhi, this market is very crowded and buzzes with activity.'
     },
 
 ];
@@ -104,7 +110,7 @@ const Shops = ({ props }) => {
                         data={DATA}
                         renderItem={
                             ({ item }) => (
-                                <TouchableOpacity onPress={() => navigation.navigate("ShopsDetails", {id: item.id, uri: item.uri,reviews:item.reviews, title: item.title, address: item.address, color1: item.color1,color2: item.color2,color3: item.color3,color4: item.color4,color5: item.color5,})}>
+                                <TouchableOpacity onPress={() => navigation.navigate("ShopsDetails", {id: item.id, uri: item.uri,reviews:item.reviews, title: item.title, address: item.address, color1: item.color1,color2: item.color2,color3: item.color3,color4: item.color4,color5: item.color5, des: item.des})}>
                                     <View style={{ flexDirection: 'row', borderWidth: 2, margin: 10, borderColor: colors.txt, width: 370, elevation: 2 }}>
                                         <Image source={{ uri: item.uri }} style={{ width: 120, height: 120 }} />
                                         <View style={{ flexDirection: 'column' }}>
