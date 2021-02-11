@@ -110,7 +110,7 @@ const Shops = ({ props }) => {
                         data={DATA}
                         renderItem={
                             ({ item }) => (
-                                <TouchableOpacity onPress={() => navigation.navigate("ShopsDetails", {id: item.id, uri: item.uri,reviews:item.reviews, title: item.title, address: item.address, color1: item.color1,color2: item.color2,color3: item.color3,color4: item.color4,color5: item.color5, des: item.des})}>
+                                <TouchableOpacity onPress={() => navigation.navigate("ShopsDetails", {id: item.id, uri: item.uri,reviews:item.reviews, title: item.title, address: item.address, color1: item.color1,color2: item.color2,color3: item.color3,color4: item.color4,color5: item.color5, des: item.des, contact :item.contact})}>
                                     <View style={{ flexDirection: 'row', borderWidth: 2, margin: 10, borderColor: colors.txt, width: 370, elevation: 2 }}>
                                         <Image source={{ uri: item.uri }} style={{ width: 120, height: 120 }} />
                                         <View style={{ flexDirection: 'column' }}>

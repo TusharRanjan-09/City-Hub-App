@@ -23,15 +23,19 @@ const ShopsDetails = (props) => {
                 <Text style={{ color: colors.txt, marginLeft: '27%', fontSize: 24, marginTop: 19 }}>Shops Details</Text>
             </View>
             <View style={{ flex: 3.5, elevation: 50, alignItems: 'center' }}>
-                <Image source={{ uri: props.route.params.uri }} style={{ width: '95%', height: 380 , borderRadius: 10}} />
+                <Image source={{ uri: props.route.params.uri }} style={{ width: '95%', height: 380, borderRadius: 10 }} />
             </View>
-            <View style={{ flex:2.5, backgroundColor: colors.details, padding: 10, }}>
+            <View style={{ flex: 2.5, backgroundColor: colors.details, padding: 10, }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <Entypo name="location-pin" size={28} color={bookColor} />
                     <Text style={{ fontSize: 16, color: colors.txt }}>{props.route.params.address}</Text>
                 </View>
+                <View style={{ flexDirection: 'row' , alignItems: 'center'}}>
+                    <Text style={{ color: colors.txt, fontSize: 25, fontWeight: 'bold', marginBottom: 5 }}>{props.route.params.title}</Text>
+                    {/* <Text style={{ color: colors.txt, fontSize: 17.5,marginLeft:10, fontWeight: 'bold', marginBottom: 5 }}>{props.route.params.contact}</Text> */}
+                </View>
 
-                <Text style={{ color: colors.txt, fontSize: 25, fontWeight: 'bold', marginBottom: 5 }}>{props.route.params.title}</Text>
+
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <AntDesign name="star" size={28} color={props.route.params.color1} />
                     <AntDesign name="star" size={28} color={props.route.params.color2} />
@@ -40,16 +44,16 @@ const ShopsDetails = (props) => {
                     <AntDesign name="star" size={28} color={props.route.params.color5} />
                     <Text style={{ color: colors.txt, marginHorizontal: 10 }}>{props.route.params.reviews}</Text>
                 </View>
-                <Text style={{fontSize:20,color: colors.txt, fontWeight:'bold'}}>Description</Text>
-                <Text style={{fontSize:17, color: colors.txt}} ellipsizeMode="tail" numberOfLines={5}>{props.route.params.des}</Text>
+                <Text style={{ fontSize: 20, color: colors.txt, fontWeight: 'bold' }}>Description</Text>
+                <Text style={{ fontSize: 17, color: colors.txt }} ellipsizeMode="tail" numberOfLines={5}>{props.route.params.des}</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'center', margin: 10 }}>
-                    <TouchableOpacity style={{marginLeft:10,elevation:5,  width: 180, height: 50, borderRadius: 30, justifyContent: 'center', alignItems: 'center', backgroundColor: 'blue', flexDirection: 'row' }}>
-                        <Text style={{ color: colors.txt, fontWeight:'bold',fontSize: 18, margin: 5 }}>Get Direction</Text>
+                    <TouchableOpacity style={{ marginLeft: 10, elevation: 5, width: 180, height: 50, borderRadius: 30, justifyContent: 'center', alignItems: 'center', backgroundColor: 'blue', flexDirection: 'row' }}>
+                        <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 18, margin: 5 }}>Get Direction</Text>
                         <FontAwesome5 name="directions" size={28} color='white' />
                     </TouchableOpacity>
-                    <TouchableOpacity style={{elevation:5, width: 180, height: 50, borderRadius: 30, justifyContent: 'center', alignItems: 'center', backgroundColor: 'orange', flexDirection: 'row', marginHorizontal:10 }}>
-                        <Text style={{ color: colors.txt, fontSize: 18, margin: 5, fontWeight:'bold' }}>Call Now</Text>
-                        <Feather name="phone-call" size={28} color='orange' />
+                    <TouchableOpacity style={{ elevation: 5, width: 180, height: 50, borderRadius: 30, justifyContent: 'center', alignItems: 'center', backgroundColor: 'orange', flexDirection: 'row', marginLeft: 10 }}>
+                        <Text style={{ color: colors.txt, fontSize: 18, margin: 5, fontWeight: 'bold' }}>Call Now</Text>
+                        <Feather name="phone-call" size={28} color='white' />
                     </TouchableOpacity>
                 </View>
             </View>
