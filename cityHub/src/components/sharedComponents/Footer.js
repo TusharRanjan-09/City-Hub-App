@@ -11,7 +11,7 @@ export default function Footer({ navigation }) {
     const { colors } = useTheme()
     return (
         <View style={styles.container}>
-            <Text style={{ fontSize: 34, color: colors.txt, fontWeight: 'bold', paddingHorizontal: 20, paddingTop: 5, paddingBottom: 5 }}>Popular Categories</Text>
+            <Text style={{ fontSize: 32, color: colors.txt, fontWeight: 'bold', paddingHorizontal: 20, paddingTop: 5, paddingBottom: 5 }}>Popular Categories</Text>
             <ScrollView horizontal={true} style={{ marginBottom: 95 }}>
                 <Card1 />
                 <Card5 />              

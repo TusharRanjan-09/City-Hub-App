@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Image, TouchableOpacity } from 'react-native';
+import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Image, TouchableOpacity, Dimensions } from 'react-native';
 import { useNavigation, useTheme } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -12,9 +12,11 @@ const HotelDetails = (props) => {
     const navigation = useNavigation();
     const myColor = colors.txt
     const bookColor = colors.gps
+    const Width = Dimensions.get('screen').width
+    const Height = Dimensions.get('screen').height
     // console.warn(props)
     return (
-        <SafeAreaView style={{ backgroundColor: colors.headerColor, flex: 1 }}>
+        <SafeAreaView style={{ backgroundColor: colors.headerColor, flex: 1, height: Height, width: Width ,}}>
 
             <View style={{ backgroundColor: colors.headerColor, flexDirection: 'row', alignItems: 'center', }}>
                 <TouchableOpacity onPress={() => navigation.navigate("Hotels")} style={{ backgroundColor: colors.headerColor, PaddingTop: 20 }}>
@@ -25,7 +27,7 @@ const HotelDetails = (props) => {
             <View style={{ flex: 3.5, }}>
                 <Image source={{ uri: props.route.params.uri }} style={{ width: '100%', height: 280 }} />
             </View>
-            <View style={{ flex: 6.5, backgroundColor: colors.details, padding: 10, borderTopLeftRadius: 40, borderTopRightRadius: 40 }}>
+            <View style={{ flex: 6.5, backgroundColor: colors.details, padding: 10, borderTopLeftRadius: 40, borderTopRightRadius: 40 , paddingBottom:45}}>
                <View style={{flexDirection: 'row', alignItems: 'center'}}>
                <Entypo name="location-pin" size={28} color={bookColor} />  
                <Text style={{fontSize: 16, color: colors.txt}}>{props.route.params.address}</Text>
@@ -59,7 +61,7 @@ const HotelDetails = (props) => {
                <Text style={{color: 'red', marginTop: 20, width: 340, marginLeft: 5,fontSize: 17}}>Sanatized Before Your Eyes | Contactless Check-In | All staffs temp checked </Text>
                </View>
                
-               <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop:66}}>
+               <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop:56}}>
                    <View style={{flexDirection: 'column'}}>
                   
                <Text style={{fontSize:20,marginLeft:22, fontWeight: 'bold', color: colors.cost}}>{props.route.params.cost}</Text>

@@ -17,7 +17,7 @@ export default function SignUp({ navigation }) {
                     <Input email={tt} />
 
                     <TouchableOpacity style={styles.button} onPress={() => navigation.replace("Explore")}>
-                        <Text style={styles.btntxt}>SIGN Up</Text>
+                        <Text style={styles.btntxt}>SIGN UP</Text>
                     </TouchableOpacity>
                     <View style={{ marginTop: 80 }}>
                         <Text style={{ fontSize: 15 }}>   By clicking Sign Up you agree to the following</Text>
@@ -37,12 +37,13 @@ const width = Dimensions.get('screen').width
 const height = Dimensions.get('screen').height
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
+    
         backgroundColor: '#fff',
         paddingTop: 30,
         width: width,
         height: height,
-        paddingHorizontal: 30
+       alignItems:'center'
+        // paddingHorizontal: 30
     },
     txt: {
         fontSize: 39,

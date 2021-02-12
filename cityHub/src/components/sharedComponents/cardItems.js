@@ -11,7 +11,7 @@ export default function cardItems() {
             <TouchableOpacity onPress={()=> navigation.navigate('Shops')}>
                 <View style={{ backgroundColor: '#fc5373', alignItems: 'center', width: width - 94, height: height - 650, borderRadius: 30, flexDirection: 'row', borderWidth: 2 }}>
                     <Image source={{ uri: 'https://imgcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2017/03/29132939/290317BanjaranMarket%40GGN13.jpg?w=1200&h=628&fill=blur&fit=fill' }}
-                        style={{ width: width - 279, height: height - 654, borderTopLeftRadius: 30, borderBottomLeftRadius: 30 , borderColor: 'black', borderWidth: 2}}
+                        style={{ width: width - 279, height: height - 651, borderTopLeftRadius: 30, borderBottomLeftRadius: 30 , borderColor: 'black', borderWidth: 1}}
                     />
                     <Text style={{ width: 199, fontSize: 17, color: 'white', margin: 5 }}>A big artefacts Market, at reasonable price, sector-56, Gurgaon</Text>
                 </View>

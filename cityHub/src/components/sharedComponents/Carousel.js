@@ -14,7 +14,7 @@ export default function Carousel({navigation}) {
   return (
     <View style={styles.container}>
         <ScrollView>
-                <Text style={{fontSize: 34,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Categories</Text>
+                <Text style={{fontSize: 32,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Categories</Text>
                 <ScrollView horizontal={true}>
                     <Category />
                     <Category />
@@ -23,28 +23,28 @@ export default function Carousel({navigation}) {
                     <Category />
                 </ScrollView>
             
-                <Text style={{fontSize: 34,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Card Items</Text>
+                <Text style={{fontSize: 32,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Card Items</Text>
                 <ScrollView horizontal={true}>
                     <CardItems/>
                     <CardItems/>
                     <CardItems/>
                     <CardItems/>
                 </ScrollView>
-                <Text style={{fontSize: 34,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Icon Categories</Text>
+                <Text style={{fontSize: 32,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Icon Categories</Text>
                 <ScrollView horizontal={true}>
                   <IconCategory/>
                   <IconCategory/>
                   <IconCategory/>
                   <IconCategory/>
                 </ScrollView>
-                <Text style={{fontSize: 34,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Offers</Text>
+                <Text style={{fontSize: 32,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Offers</Text>
                 <ScrollView horizontal={true}>
                     <OfferBanner />
                     <OfferBanner />
                     <OfferBanner />
                     <OfferBanner />
                 </ScrollView>
-                <Text style={{fontSize: 34,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Our Collections</Text>
+                <Text style={{fontSize: 32,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Our Collections</Text>
                 <ScrollView horizontal={true}>
                     <CardCarousel/>
                     <CardCarousel/>

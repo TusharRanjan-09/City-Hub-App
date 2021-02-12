@@ -14,7 +14,7 @@ export default function Forgot({navigation}) {
       <Text style={{fontSize: 18, color: 'black', width: 300, marginTop: 35, marginBottom: 30}}>Please enter your email adress. you will receive a link to create new password via email.</Text>
         <TextInput placeholder="Username/Email" style={{width: 300,height: 60, borderBottomColor: 'lightgrey', borderBottomWidth: 1, fontSize: 20}}/>
       
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate("Explore")}>
          <Text style={styles.btntxt}>SEND</Text>
      </TouchableOpacity>
         </View>

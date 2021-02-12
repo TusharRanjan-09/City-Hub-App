@@ -15,9 +15,9 @@ export default function cardCarousel() {
       style={{ width: Width*.498, height: Height*.14, borderTopLeftRadius:30, borderTopRightRadius: 30}}
       />
       <View style={{height: Height*.14}}>
-      <Text style={{color: 'white', fontWeight: 'bold', fontSize: 28, width: Width*.4, alignSelf: 'center', alignContent: 'center', alignItems: 'center'}}>Holiday Inn</Text>
-       <Text style={{fontSize: 15, paddingHorizontal: 5, margin:3, color: 'white', width: Width*.42}}>Aesthetically designed rooms,</Text>
-       <Text style={{fontSize: 15, color: 'white', width: Width*.45}}>Comfortable budget stay !</Text>
+      <Text style={{color: 'white', fontWeight: 'bold', fontSize: 26, width: Width*.4, alignSelf: 'center', alignContent: 'center', alignItems: 'center'}}>Holiday Inn</Text>
+       <Text style={{fontSize: 14, paddingHorizontal: 5, margin:3, color: 'white', width: Width*.42}}>Aesthetically designed rooms,</Text>
+       <Text style={{fontSize: 14, color: 'white', width: Width*.45}}>Comfortable budget stay !</Text>
       </View>
       
         </View>

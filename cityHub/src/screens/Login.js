@@ -10,7 +10,7 @@ export default function Login({ navigation }) {
     return (
         <View style={styles.container}>
             <Text style={styles.inputt}>Hi,</Text>
-            <Text style={styles.input}>Welcome back!</Text>
+            <Text style={styles.input}>Welcome!</Text>
             <View style={styles.inpview}>
                 <TextInput placeholder={tt.email} style={{ width: 330, height: 60, borderBottomColor: 'lightgrey', borderBottomWidth: 1, fontSize: 20 }} />
                 <TextInput placeholder={tt.pass} style={{ width: 330, height: 60, borderBottomColor: 'lightgrey', borderBottomWidth: 1, fontSize: 20 }} secureTextEntry={true}/>
@@ -43,33 +43,34 @@ const styles = StyleSheet.create({
         paddingTop: 30,
         width: width,
         height: height,
-
+alignItems:'center'
     },
     input: {
         fontSize: 42,
         fontWeight: 'bold',
         color: 'black',
-        paddingLeft: 29
+        // paddingLeft: 29
     },
     inputt: {
         fontSize: 42,
         fontWeight: 'bold',
         color: 'black',
-        paddingLeft: 29,
+        // paddingLeft: 29,
         marginTop: 50
     },
     inpview: {
-        marginLeft: 29,
+        // marginLeft: 29,
         marginTop: 40,
         marginBottom: 25
     },
     inpvieww: {
-        marginLeft: 192,
+        marginLeft: width*.5,
         marginTop: 10,
     },
     txt: {
         fontSize: 16,
-        color: '#4cb8ff'
+        color: '#4cb8ff',
+        
     },
     button: {
         backgroundColor: '#4cb8ff',
