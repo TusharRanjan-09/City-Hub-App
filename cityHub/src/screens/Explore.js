@@ -6,21 +6,13 @@ import Search from "../components/sharedComponents/Search";
 import { useNavigation, useTheme } from '@react-navigation/native';
 export default function Explore() {
     const {colors} = useTheme()
+    const Width = Dimensions.get('screen').width
+    const Height = Dimensions.get('screen').height
     return (
-        <SafeAreaView style={{backgroundColor: colors.backGround, alignItems: 'center',width: '100%',height: '100%',}}>
+        <SafeAreaView style={{backgroundColor: colors.backGround, alignItems: 'center',width: Width,height: Height, paddingBottom:105}}>
             <Search />
            <Carousel />
         </SafeAreaView>
     );
 }
 
-// const width = Dimensions.get('screen').width
-// const height = Dimensions.get('screen').height
-// const styles = StyleSheet.create({
-//     container: {
-//         backgroundColor: colors.backGround,
-//         alignItems: 'center',
-//         width: width,
-//         height: height,
-//     },
-// });

@@ -22,20 +22,7 @@ export default function Carousel({navigation}) {
                     <Category />
                     <Category />
                 </ScrollView>
-                <Text style={{fontSize: 34,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Offers</Text>
-                <ScrollView horizontal={true}>
-                    <OfferBanner />
-                    <OfferBanner />
-                    <OfferBanner />
-                    <OfferBanner />
-                </ScrollView>
-                <Text style={{fontSize: 34,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Our Collections</Text>
-                <ScrollView horizontal={true}>
-                    <CardCarousel/>
-                    <CardCarousel/>
-                    <CardCarousel/>
-                    <CardCarousel/>
-                </ScrollView>
+            
                 <Text style={{fontSize: 34,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Card Items</Text>
                 <ScrollView horizontal={true}>
                     <CardItems/>
@@ -49,6 +36,20 @@ export default function Carousel({navigation}) {
                   <IconCategory/>
                   <IconCategory/>
                   <IconCategory/>
+                </ScrollView>
+                <Text style={{fontSize: 34,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Offers</Text>
+                <ScrollView horizontal={true}>
+                    <OfferBanner />
+                    <OfferBanner />
+                    <OfferBanner />
+                    <OfferBanner />
+                </ScrollView>
+                <Text style={{fontSize: 34,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Our Collections</Text>
+                <ScrollView horizontal={true}>
+                    <CardCarousel/>
+                    <CardCarousel/>
+                    <CardCarousel/>
+                    <CardCarousel/>
                 </ScrollView>
                <Footer/>
               

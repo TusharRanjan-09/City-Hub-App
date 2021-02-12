@@ -66,7 +66,9 @@ const HotelDetails = (props) => {
                <Text style={{fontSize:20, color: colors.txt,}}>Total Amount</Text>
                    </View>
              
-               <TouchableOpacity style={{elevation:5, backgroundColor :'orange', justifyContent :'center', alignItems :'center', borderRadius:10, width:200, height:60}}>
+               <TouchableOpacity style={{elevation:5, backgroundColor :'orange', justifyContent :'center', alignItems :'center', borderRadius:10, width:200, height:60}}
+               onPress={()=> alert('Booked successfully')}
+               >
                    <Text style={{fontSize: 28, color: 'white',fontWeight: 'bold'}}>Book Now</Text>
                </TouchableOpacity>
                </View>

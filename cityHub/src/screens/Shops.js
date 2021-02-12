@@ -118,7 +118,7 @@ const Shops = ({ props }) => {
                                             <Text style={{ color: colors.txt, fontSize: 18, width: 250 }} ellipsizeMode="tail" numberOfLines={2}>{item.address}</Text>
                                             <Text style={{ color: colors.txt, fontSize: 18 }}>{item.contact}</Text>
                                         </View>
-                                        <Ionicons name="ios-bookmark-outline" size={40} color={bookColor} style={{ position: 'absolute', }} />
+                                        {/* <Ionicons name="ios-bookmark-outline" size={40} color={bookColor} style={{ position: 'absolute', }} /> */}
                                     </View>
                                 </TouchableOpacity>
                             )
