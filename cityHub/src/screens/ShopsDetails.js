@@ -15,7 +15,7 @@ const ShopsDetails = (props) => {
     const bookColor = colors.gps
     //    console.warn(props)
     return (
-        <SafeAreaView style={{ backgroundColor: colors.headerColor, flex: 1 }}>
+        <SafeAreaView style={{ backgroundColor: colors.headerColor, flex: 1,  }}>
             <View style={{ backgroundColor: colors.headerColor, flexDirection: 'row', alignItems: 'center', }}>
                 <TouchableOpacity onPress={() => navigation.navigate("Shops")} style={{ backgroundColor: colors.headerColor, PaddingTop: 20 }}>
                     <Ionicons name="arrow-back" size={28} color={myColor} style={{ paddingLeft: 2, marginTop: 22 }} />
@@ -25,7 +25,7 @@ const ShopsDetails = (props) => {
             <View style={{ flex: 3.5, elevation: 50, alignItems: 'center' }}>
                 <Image source={{ uri: props.route.params.uri }} style={{ width: '95%', height: 380, borderRadius: 10 }} />
             </View>
-            <View style={{ flex: 2.5, backgroundColor: colors.details, padding: 10, }}>
+            <View style={{ flex: 2.5, backgroundColor: colors.details, padding: 10,paddingBottom: 15 }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <Entypo name="location-pin" size={28} color={bookColor} />
                     <Text style={{ fontSize: 16, color: colors.txt }}>{props.route.params.address}</Text>
