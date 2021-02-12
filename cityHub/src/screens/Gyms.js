@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Image, TouchableOpacity, Touchable } from 'react-native';
+import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Image, TouchableOpacity, Touchable, Dimensions } from 'react-native';
 import { useNavigation, useTheme } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 const DATA = [
@@ -53,8 +53,10 @@ const Gyms = () => {
     const navigation = useNavigation();
     const myColor = colors.txt
     const bookColor = colors.book
+    const Width = Dimensions.get('screen').width
+    const Height = Dimensions.get('screen').height
     return (
-        <SafeAreaView style={{backgroundColor: colors.headerColor}}>
+        <SafeAreaView style={{backgroundColor: colors.headerColor, marginBottom: 95}}>
             <View >
                 <View style={{backgroundColor: colors.headerColor, flexDirection: 'row', alignItems: 'center',}}>
                 <TouchableOpacity onPress={() => navigation.navigate("Explore")} style={{backgroundColor : colors.headerColor, PaddingTop:20}}>
@@ -67,11 +69,11 @@ const Gyms = () => {
                     renderItem={
                         ({ item }) => (
                             <TouchableOpacity>
-                                <View style={{ flexDirection: 'row', borderWidth: 2, margin: 10, borderColor: colors.txt, elevation: 2 }}>
-                            <Image source={{ uri: item.uri }} style={{ width: 120, height: 120 }} />
+                                <View style={{ flexDirection: 'row', borderWidth: 2, margin: 10, borderColor: colors.txt, elevation: 2,width: Width*.95,height:Height*.15 }}>
+                            <Image source={{ uri: item.uri }} style={{ width: Width*.29, height: Height*.145 }} />
                             <View style={{ flexDirection: 'column', marginHorizontal: 10, marginTop: 10 }}>
                                 <Text style={{ color: colors.txt, fontSize: 20, fontWeight: 'bold' }}>{item.title}</Text>
-                                <Text style={{ color: colors.txt, fontSize: 18, width: 250 }} ellipsizeMode="tail" numberOfLines={2}>{item.address}</Text>
+                                <Text style={{ color: colors.txt, fontSize: 18, width: Width*.65 }} ellipsizeMode="tail" numberOfLines={2}>{item.address}</Text>
                                 <Text style={{ color: colors.txt, fontSize: 18 }}>{item.contact}</Text>
                             </View>
                             {/* <Ionicons name="ios-bookmark-outline" size={40} color={bookColor} style={{position: 'absolute', marginLeft:330}} /> */}
