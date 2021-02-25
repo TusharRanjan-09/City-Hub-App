@@ -89,7 +89,91 @@ const DATA = [
         reviews: '11,276 Reviews',
         des: 'Sadar Bazaar is the largest wholesale cosmetics jewellery market of household items in Delhi, India. Like other major markets of Old Delhi, this market is very crowded and buzzes with activity.'
     },
+    {
+        id: '7',
+        title: 'Ambience Mall',
+        uri: 'https://cabgurgaon.files.wordpress.com/2013/06/gurgaon-ambience-mall.jpg',
+        address: '144, MG Road, Rohtak, Haryana',
+        contact: '9999999999',
+        color1: 'orange',
+        color2: 'orange',
+        color3: 'orange',
+        color4: 'orange',
+        color5: 'white',
+        reviews: '11,276 Reviews',
+        des: 'Ambience Mall,Rohtak is a shopping mall in Rohtak, Haryana, India. It contains a built-up area of 21 lakhs square feet and a retail area of 18 lakhs square feet. Most floors have a shopping area of 860 meters.'
 
+    },
+    {
+        id: '8',
+        title: 'MGF Metropolis Mall',
+        uri: 'https://zricks.com/ImagesPostProject/200000000000204651/vdjbp.jpg',
+        address: '72/6, Sector-51, Palam Vihar, Rohtak, Haryana',
+        contact: '9999999999',
+        color1: 'orange',
+        color2: 'orange',
+        color3: 'orange',
+        color4: 'orange',
+        color5: 'orange',
+        reviews: '21,768 Reviews',
+        des: 'MGF Metropolis Mall has been located at MG Road and is extremely close to high affluent residential complexes. This commercial project has been given an extremely futuristic look with tons of external design elements decorating the exterior. MGF Metropolis Mall is made entirely of glass and metal and, as a show of excellence in design.'
+    },
+    {
+        id: '9',
+        title: 'Banjara Market',
+        uri: 'https://th.bing.com/th/id/OIP.WfafU81VfcUt244Ceqx5YwHaEK?pid=Api&rs=1',
+        address: '72, Sector-56, New Palam Vihar, Rohtak, Haryana',
+        contact: '9999999999',
+        color1: 'orange',
+        color2: 'orange',
+        color3: 'orange',
+        color4: 'orange',
+        color5: 'white',
+        reviews: '32,426 Reviews',
+        des: 'Banjara market, as the name suggests is the flea market, which is in Rohtak has grabbed its attention for its home decor products. It’s the best place to shop home decor items, furniture, accessories, photo frames, bar tables, pots, stools of various sizes and a lot more at the affordable price.'
+    },
+    {
+        id: '10',
+        title: 'Vypaar Kendra',
+        uri: 'https://www.zricks.com/ImagesPostProject/200000000000215661/Banner.jpg',
+        address: '54/3, sector-47, Rohtak, Haryana',
+        contact: '9999999999',
+        color1: 'orange',
+        color2: 'orange',
+        color3: 'orange',
+        color4: 'orange',
+        color5: 'orange',
+        reviews: '9,765 Reviews',
+        des: 'Being one of the oldest markets in Rohtak, Vyapar Kendra has been the go-to hub for everything affordable! From clothes, food and accessories to kitchenware, home essentials and affordable services, Vyapar Kendra has it all. Its a big market and you are bound to get lost at least once here'
+    },
+    {
+        id: '11',
+        title: 'Sahara Mall',
+        uri: 'https://www.zricks.com/ImagesPostProject/200000000000216653/Sahara_Mall_Banner001.jpg',
+        address: '52, Sector-46, Iffco Chowk, Rohtak, Haryana',
+        contact: '9999999999',
+        color1: 'orange',
+        color2: 'orange',
+        color3: 'orange',
+        color4: 'white',
+        color5: 'white',
+        reviews: '15,245 Reviews',
+        des: 'Sahara Mall is a high-end shopping mall in the industrial city of Rohtak. One of the oldest in the city, it is a vast mall flooded with national and international brands. Visit this mall with your friends and loved ones and shop what you want. Be it clothes, shoes, accessories or electronic items, you are sure to get something of your choice.'
+    },
+    {
+        id: '12',
+        title: 'Sadar Bazaar',
+        uri: 'https://kathryndarrow.files.wordpress.com/2008/07/the_world1169404200tunis_003_souq.jpg',
+        address: '86/4, Sector-22,Near Ansal Plaza, Rohtak, Haryana',
+        contact: '9999999999',
+        color1: 'orange',
+        color2: 'orange',
+        color3: 'orange',
+        color4: 'orange',
+        color5: 'white',
+        reviews: '11,276 Reviews',
+        des: 'Sadar Bazaar is the largest wholesale cosmetics jewellery market of household items in Delhi, India. Like other major markets of Old Delhi, this market is very crowded and buzzes with activity.'
+    },
 ];
 
 const Shops = ({ props }) => {

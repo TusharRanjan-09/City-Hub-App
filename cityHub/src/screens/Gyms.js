@@ -2,6 +2,7 @@ import React from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Image, TouchableOpacity, Touchable, Dimensions } from 'react-native';
 import { useNavigation, useTheme } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+export const scaleSize = (size, width) => (width / 375) * size;
 const DATA = [
     {
         id: '1',
@@ -56,7 +57,7 @@ const Gyms = () => {
     const Width = Dimensions.get('screen').width
     const Height = Dimensions.get('screen').height
     return (
-        <SafeAreaView style={{backgroundColor: colors.headerColor, marginBottom: 95}}>
+        <SafeAreaView style={[styles.container,{backgroundColor: colors.headerColor}]}>
             <View >
                 <View style={{backgroundColor: colors.headerColor, flexDirection: 'row', alignItems: 'center',}}>
                 <TouchableOpacity onPress={() => navigation.navigate("Explore")} style={{backgroundColor : colors.headerColor, PaddingTop:20}}>
@@ -89,9 +90,16 @@ const Gyms = () => {
         </SafeAreaView>
     );
 }
+const {width, height} =  Dimensions.get('window')
+const buttonWidth = scaleSize(350, width)
+const buttonHeight = scaleSize(24, height)
+const inputWidth = scaleSize(305, width)
+const inputHeight = scaleSize(34, height)
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        width:width,
+        height: height,
+        alignItems: 'center'
     },
     item: {
         backgroundColor: '#f9c2ff',
