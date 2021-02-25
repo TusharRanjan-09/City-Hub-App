@@ -6,30 +6,27 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-
+export const scaleSize = (size, width) => (width / 375) * size;
 const HotelDetails = (props) => {
     const { colors } = useTheme()
     const navigation = useNavigation();
     const myColor = colors.txt
     const bookColor = colors.gps
-    const Width = Dimensions.get('screen').width
-    const Height = Dimensions.get('screen').height
-    // console.warn(props)
     return (
-        <SafeAreaView style={{ backgroundColor: colors.headerColor, flex: 1, height: Height, width: Width ,}}>
+        <SafeAreaView style={{ backgroundColor: colors.headerColor,  height: height, width: width ,}}>
 
             <View style={{ backgroundColor: colors.headerColor, flexDirection: 'row', alignItems: 'center', }}>
                 <TouchableOpacity onPress={() => navigation.navigate("Hotels")} style={{ backgroundColor: colors.headerColor, PaddingTop: 20 }}>
                     <Ionicons name="arrow-back" size={28} color={myColor} style={{ paddingLeft: 2, marginTop: 22 }} />
                 </TouchableOpacity>
-                <Text style={{ color: colors.txt, marginLeft: '27%', fontSize: 24, marginTop: 19 }}>Hotel Details</Text>
+                <Text style={{ color: colors.txt,marginLeft: buttonWidth*.28, fontSize: 24, marginTop: 19 }}>Hotel Details</Text>
             </View>
-            <View style={{ flex: 3.5, }}>
-                <Image source={{ uri: props.route.params.uri }} style={{ width: '100%', height: 280 }} />
+            <View style={{ width: width, height:buttonWidth*.85 }}>
+                <Image source={{ uri: props.route.params.uri }} style={{ width: width, height:buttonWidth }} />
             </View>
-            <View style={{ flex: 6.5, backgroundColor: colors.details, padding: 10, borderTopLeftRadius: 40, borderTopRightRadius: 40 , paddingBottom:45}}>
+            <View style={{ width: width, height:buttonWidth*1.1, backgroundColor: colors.details, padding: 15, borderTopLeftRadius: 40, borderTopRightRadius: 40 }}>
                <View style={{flexDirection: 'row', alignItems: 'center'}}>
-               <Entypo name="location-pin" size={28} color={bookColor} />  
+               <Entypo name="location-pin" size={32} color={bookColor} />  
                <Text style={{fontSize: 16, color: colors.txt}}>{props.route.params.address}</Text>
                </View>
                
@@ -48,20 +45,19 @@ const HotelDetails = (props) => {
                <FontAwesome5 name="award" size={28} color={myColor} style={{ paddingLeft: 2, marginTop: 22 }} />
                <Text style={{width: 170, color: colors.txt,fontSize: 18}}>Won Awards for Good Customer Services.</Text>
                </View>
-               
-               
                <View style={{flexDirection: 'column'}}>
                <Ionicons name="people" size={28} color={myColor} style={{ paddingLeft: 2, marginTop: 22 }} />
                    <Text style={{width: 170, color: colors.txt, fontSize: 18}}>Happy Customers Every year</Text>
                    <Text style={{color:colors.book, fontSize :20}}>{props.route.params.customers}</Text>
                </View>
                </View>
+
                <View style={{flexDirection: 'row', alignItems: 'center', alignContent: 'center'}}>
                <MaterialIcons name="sanitizer" size={28} color={myColor} style={{ paddingLeft: 2, marginTop: 22 }} />
-               <Text style={{color: 'red', marginTop: 20, width: 340, marginLeft: 5,fontSize: 17}}>Sanatized Before Your Eyes | Contactless Check-In | All staffs temp checked </Text>
+               <Text style={{color: 'red', marginTop: 20, width: width*.8, marginLeft: 5,fontSize: 17}}>Sanatized Before Your Eyes | Contactless Check-In | All staffs temp checked </Text>
                </View>
                
-               <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop:56}}>
+               <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',marginTop:buttonWidth*.009}}>
                    <View style={{flexDirection: 'column'}}>
                   
                <Text style={{fontSize:20,marginLeft:22, fontWeight: 'bold', color: colors.cost}}>{props.route.params.cost}</Text>
@@ -86,18 +82,17 @@ const HotelDetails = (props) => {
         </SafeAreaView>
     );
 }
+const {width, height} =  Dimensions.get('window')
+const buttonWidth = scaleSize(350, width)
+const buttonHeight = scaleSize(24, height)
+const inputWidth = scaleSize(305, width)
+const inputHeight = scaleSize(34, height)
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-    },
-    item: {
-        backgroundColor: '#f9c2ff',
-        padding: 20,
-        marginVertical: 8,
-        marginHorizontal: 16,
-    },
-    title: {
-        fontSize: 32,
+        width:width,
+        height: height,
+        alignItems: 'center',
+        
     },
 });
 
