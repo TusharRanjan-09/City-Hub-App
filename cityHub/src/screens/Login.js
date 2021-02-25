@@ -4,17 +4,18 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput,Dimensions } from 'react-native';
 import Input from '../components/sharedComponents/Input';
 import SignUp from './SignUp';
+export const scaleSize = (size, width) => (width / 375) * size;
 
 export default function Login({ navigation }) {
     const [tt, setTt] = useState({ email: 'Username/Email', pass: 'Password' })
+
     return (
         <View style={styles.container}>
             <Text style={styles.inputt}>Hi,</Text>
             <Text style={styles.input}>Welcome!</Text>
             <View style={styles.inpview}>
-                <TextInput placeholder={tt.email} style={{ width: 330, height: 60, borderBottomColor: 'lightgrey', borderBottomWidth: 1, fontSize: 20 }} />
-                <TextInput placeholder={tt.pass} style={{ width: 330, height: 60, borderBottomColor: 'lightgrey', borderBottomWidth: 1, fontSize: 20 }} secureTextEntry={true}/>
-                {/* <Input email={tt}/>   */}
+                <TextInput placeholder={tt.email} style={styles.txtinput} />
+                <TextInput placeholder={tt.pass} style={styles.txtinput} secureTextEntry={true}/>
             </View>
             <TouchableOpacity style={styles.inpvieww} onPress={() => navigation.navigate("Forgot")}>
                 <Text style={styles.txt}>Forget your password ?</Text>
@@ -34,38 +35,37 @@ export default function Login({ navigation }) {
         </View>
     );
 }
-const width = Dimensions.get('screen').width
-const height = Dimensions.get('screen').height
+const {width, height} =  Dimensions.get('window')
+const buttonWidth = scaleSize(305, width)
+const buttonHeight = scaleSize(24, height)
+const inputWidth = scaleSize(305, width)
+const inputHeight = scaleSize(34, height)
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
         backgroundColor: '#fff',
         paddingTop: 30,
         width: width,
         height: height,
-alignItems:'center'
+        alignItems:'center',
+        justifyContent:'center'
     },
     input: {
         fontSize: 42,
         fontWeight: 'bold',
-        color: 'black',
-        // paddingLeft: 29
+        color: 'black',      
     },
     inputt: {
         fontSize: 42,
         fontWeight: 'bold',
-        color: 'black',
-        // paddingLeft: 29,
-        marginTop: 50
+        color: 'black',          
     },
     inpview: {
-        // marginLeft: 29,
-        marginTop: 40,
-        marginBottom: 25
+        marginTop: buttonHeight,
+        marginBottom: buttonHeight
     },
     inpvieww: {
-        marginLeft: width*.5,
-        marginTop: 10,
+        marginTop: buttonHeight/25,
+        left:buttonWidth*.25
     },
     txt: {
         fontSize: 16,
@@ -74,10 +74,10 @@ alignItems:'center'
     },
     button: {
         backgroundColor: '#4cb8ff',
-        width: 320,
+        width: buttonWidth,
         alignSelf: 'center',
-        marginTop: 40,
-        height: 50,
+        marginTop: buttonHeight,
+        height: buttonHeight,
         borderRadius: 10,
         alignContent: 'center',
         alignItems: 'center',
@@ -87,5 +87,12 @@ alignItems:'center'
         color: 'white',
         fontWeight: 'bold',
         fontSize: 20
+    },
+    txtinput: {
+        width: inputWidth,
+        height:inputHeight, 
+        borderBottomColor: 'lightgrey', 
+        borderBottomWidth: 1, 
+        fontSize: 20  
     }
 });

@@ -1,48 +1,62 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, TextInput,Dimensions } from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
+export const scaleSize = (size, width) => (width / 375) * size;
 export default function Forgot({navigation}) {
   return (
-    <View style={{flex: 1, backgroundColor: 'white'}} >
-          <TouchableOpacity onPress={()=> navigation.navigate("Login")}>
+    <View style={styles.container} >
+          <TouchableOpacity onPress={()=> navigation.navigate("Login")} style={{position: 'absolute', top:2,left:5}}>
         <Entypo name="cross" size={28} color="black" style={{marginTop: 22, paddingLeft:2}}/>
-        </TouchableOpacity>
-        <View style={styles.container}>
-      
+        </TouchableOpacity>    
       <Text style={{fontSize:36, fontWeight: 'bold', color: 'black' ,marginTop: 25}}>Forgot password</Text>
       <Text style={{fontSize: 18, color: 'black', width: 300, marginTop: 35, marginBottom: 30}}>Please enter your email adress. you will receive a link to create new password via email.</Text>
-        <TextInput placeholder="Username/Email" style={{width: 300,height: 60, borderBottomColor: 'lightgrey', borderBottomWidth: 1, fontSize: 20}}/>
-      
+        <TextInput placeholder="Username/Email" style={styles.txtinput}/>  
         <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate("Explore")}>
          <Text style={styles.btntxt}>SEND</Text>
      </TouchableOpacity>
         </View>
-       
-    </View>
   );
 }
-
+const {width, height} =  Dimensions.get('window')
+const buttonWidth = scaleSize(305, width)
+const buttonHeight = scaleSize(24, height)
+const inputWidth = scaleSize(305, width)
+const inputHeight = scaleSize(34, height)
 const styles = StyleSheet.create({
+  con: {
+    width: width,
+    height: height,
+    backgroundColor: 'red'
+},
   container: {
-   flex: 1,
+    width: width,
+    height: height,
     backgroundColor: '#fff',
     alignItems: 'center',
+    justifyContent:'center'
   },
   button: {
     backgroundColor: '#4cb8ff',
-    width: 320,
-    alignSelf :'center',
-    height: 50,
+    width: buttonWidth,
+    alignSelf: 'center',
+    marginTop: buttonHeight*1.5,
+    height: buttonHeight,
     borderRadius: 10,
     alignContent: 'center',
     alignItems: 'center',
-    justifyContent :'center',
-    marginTop: 88
+    justifyContent: 'center'
 },
 btntxt: {
     color: 'white',
     fontWeight: 'bold',
     fontSize: 20
+},
+txtinput: {
+  width: inputWidth,
+  height:inputHeight, 
+  borderBottomColor: 'lightgrey', 
+  borderBottomWidth: 1, 
+  fontSize: 20  
 }
 });
