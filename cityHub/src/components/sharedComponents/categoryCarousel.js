@@ -10,9 +10,9 @@ export default function categoryCarousel() {
   return (
     <View style={styles.container}>
         <TouchableOpacity onPress={()=> navigation.navigate("Hotels")}>
-        <View style={{backgroundColor: '#fc0',width: buttonWidth*.95, height: inputHeight*1.2, borderRadius: 20, flexDirection: 'row', alignItems: 'center',justifyContent:'center'}}>
+        <View style={{backgroundColor: '#fc0',width: buttonWidth*.8, height: inputHeight*1.2, borderRadius: 20, flexDirection: 'row', alignItems: 'center',justifyContent:'center'}}>
          <Image source={{uri: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80'}}
-         style={{width:inputHeight*1.0, height: inputHeight*1.0, borderRadius: inputHeight/2, margin:inputHeight*.1}}
+         style={{width:buttonWidth*.33, height: buttonWidth*.33, borderRadius: buttonWidth*.166, marginLeft:inputHeight*.1}}
          />
      <Text style={{fontSize: 29, color: 'white', fontWeight: 'bold'}}>Hotels</Text>
         </View>
@@ -27,7 +27,7 @@ const inputWidth = scaleSize(340, width)
 const inputHeight = scaleSize(34, height)
 const styles = StyleSheet.create({
   container: {
-    width: width/1.8,
+    width: buttonWidth*.85,
     height:buttonHeight,
     alignItems: 'center',
     justifyContent:'center',

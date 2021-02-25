@@ -15,7 +15,7 @@ export default function card4() {
     </View> 
     </TouchableOpacity>
        
-        <Text style={{alignSelf:'center', color: colors.txt, fontWeight: 'bold'}}>Fitness</Text>
+        <Text style={{alignSelf:'center', color: colors.txt, fontWeight: 'bold',fontSize:15}}>Fitness</Text>
     </View>
   );
 }
@@ -27,8 +27,8 @@ const inputHeight = scaleSize(60, height)
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'darkblue',
-    width: buttonWidth*.86,
-    height:buttonWidth*.86,
+    width: buttonWidth*.80,
+    height:buttonWidth*.80,
     alignItems: 'center',
     justifyContent:'center',
     borderRadius: 7

@@ -15,7 +15,7 @@ export default function card5() {
     </View>    
     </TouchableOpacity>
     
-        <Text style={{alignSelf:'center',color: colors.txt, fontWeight: 'bold'}}>Shopping</Text>
+        <Text style={{alignSelf:'center',color: colors.txt, fontWeight: 'bold',fontSize:15}}>Shopping</Text>
     </View>
   );
 }
@@ -27,8 +27,8 @@ const inputHeight = scaleSize(60, height)
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fc0',
-    width: buttonWidth*.86,
-    height:buttonWidth*.86,
+    width: buttonWidth*.80,
+    height:buttonWidth*.80,
     alignItems: 'center',
     justifyContent:'center',
     borderRadius: 7

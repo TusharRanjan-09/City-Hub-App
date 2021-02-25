@@ -14,8 +14,11 @@ export default function offerBanner() {
           <Image source={{ uri: 'https://images.unsplash.com/photo-1575729312527-1bdecaae271e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80' }}
             style={{ width: buttonWidth*.95, height:buttonWidth*.6 }}
           />
-          <Text style={{ fontSize: 28, color: 'white', fontWeight: 'bold', position: 'absolute', top:buttonWidth*.27 }}>Book Now!</Text>
-          <Text style={{ fontSize: 28, color: 'white', fontWeight: 'bold', position: 'absolute', top:buttonWidth*.39 }}>Starting at ₹ 799/-</Text>
+          <View style={{position: 'absolute', top:buttonWidth*.285, alignItems:'center'}}>
+          <Text style={{ fontSize: 28, color: 'white', fontWeight: 'bold',  }}>Book Now!</Text>
+          <Text style={{ fontSize: 28, color: 'white', fontWeight: 'bold', }}>Starting at ₹ 799/-</Text>
+          </View>
+         
         </View>
       </TouchableOpacity>
     </View>

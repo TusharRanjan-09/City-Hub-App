@@ -11,7 +11,7 @@ export default function IconCategory() {
             <TouchableOpacity onPress={()=> navigation.navigate('Gyms')}>
                 <View style={styles.card}>
                     <Image source={{ uri: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80' }}
-                        style={{ width: inputWidth, height: inputWidth, borderRadius: 50}}
+                        style={{ width: inputWidth, height: inputWidth, borderRadius: inputWidth/2}}
                     />
                     <Text style={{ fontSize: 20, color: colors.iconCategory,fontWeight :'bold' }}>Gym</Text>
                 </View>
