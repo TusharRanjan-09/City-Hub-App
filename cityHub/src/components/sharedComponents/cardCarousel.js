@@ -5,6 +5,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { useNavigation, useTheme } from '@react-navigation/native';
 export const scaleSize = (size, width) => (width / 375) * size;
+import {FONTSIZE} from '../../utilities/font';
 export default function cardCarousel() {
   const navigation = useNavigation();
   return (
@@ -15,9 +16,8 @@ export default function cardCarousel() {
       style={{ width: inputWidth*1.01, height: inputWidth/2, borderTopLeftRadius:30, borderTopRightRadius: 30}}
       />
       <View style={{height: inputWidth*.5, backgroundColor:'red', width:inputWidth, borderBottomLeftRadius:30, borderBottomRightRadius:30, alignItems: 'center'}}>
-      <Text style={{color: 'white', fontWeight: 'bold', fontSize: 26, width: inputWidth,alignSelf:'center', marginLeft:inputWidth/4}}>Holiday Inn</Text>
-       {/* <Text style={{fontSize: 14, paddingHorizontal: 5, margin:3, color: 'white', width: inputWidth,marginLeft:inputWidth*.19}}>Aesthetically designed rooms,</Text> */}
-       <Text style={{fontSize: 15, color: 'white', width: inputWidth, marginLeft:inputWidth*.025}}>Comfortable budget stay</Text>
+      <Text style={{color: 'white', fontWeight: 'bold', fontSize: FONTSIZE.small_medium, width: inputWidth,alignSelf:'center', marginLeft:inputWidth/4}}>Holiday Inn</Text>
+       <Text style={{fontSize: FONTSIZE.medium, color: 'white', width: inputWidth, marginLeft:inputWidth*.025}}>Comfortable budget stay</Text>
       </View>  
         </View>
         </TouchableOpacity>    

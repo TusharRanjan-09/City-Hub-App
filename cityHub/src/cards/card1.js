@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, TouchableOpacity, TextInput, ImageBackground,Di
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { useNavigation, useTheme } from '@react-navigation/native';
 export const scaleSize = (size, width) => (width / 375) * size;
+import {FONTSIZE} from '../utilities/font';
 export default function card1() {
   const {colors} = useTheme()
   const navigation = useNavigation();
@@ -15,7 +16,7 @@ export default function card1() {
     </View>   
     </TouchableOpacity>
     
-        <Text style={{alignSelf:'center', color: colors.txt, fontWeight: 'bold', fontSize:15}}>Hotels</Text>
+        <Text style={{alignSelf:'center', color: colors.txt, fontWeight: 'bold', fontSize:FONTSIZE.medium}}>Hotels</Text>
     </View>
   );
 }
