@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, TextInput, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, TextInput, ImageBackground ,Dimensions } from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { useNavigation, useTheme } from '@react-navigation/native';
+export const scaleSize = (size, width) => (width / 375) * size;
 export default function card4() {
   const {colors} = useTheme()
   const navigation = useNavigation();
@@ -14,19 +15,22 @@ export default function card4() {
     </View> 
     </TouchableOpacity>
        
-        <Text style={{marginLeft: 20, color: colors.txt, fontWeight: 'bold'}}>Fitness</Text>
+        <Text style={{alignSelf:'center', color: colors.txt, fontWeight: 'bold'}}>Fitness</Text>
     </View>
   );
 }
-
+const {width, height} =  Dimensions.get('window')
+const buttonWidth = scaleSize(100, width)
+const buttonHeight = scaleSize(45, height)
+const inputWidth = scaleSize(300, width)
+const inputHeight = scaleSize(60, height)
 const styles = StyleSheet.create({
-  container: { 
-    backgroundColor: '#5dade2',
-    width: 80,
-    height:80,
-    justifyContent: 'center',
+  container: {
+    backgroundColor: 'darkblue',
+    width: buttonWidth*.86,
+    height:buttonWidth*.86,
     alignItems: 'center',
+    justifyContent:'center',
     borderRadius: 7
   },
- 
 });

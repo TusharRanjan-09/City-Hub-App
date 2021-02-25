@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, TextInput, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, TextInput, ImageBackground,Dimensions } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { useNavigation, useTheme } from '@react-navigation/native';
+export const scaleSize = (size, width) => (width / 375) * size;
 export default function card1() {
   const {colors} = useTheme()
   const navigation = useNavigation();
@@ -10,23 +11,26 @@ export default function card1() {
     <View style={{alignContent: 'center',paddingHorizontal:10}}>  
     <TouchableOpacity onPress={()=> navigation.navigate('Hotels')}>
     <View style={styles.container}>
-    <FontAwesome name="hotel" size={44} color="white" />
+    <FontAwesome name="hotel" size={48} color="white" />
     </View>   
     </TouchableOpacity>
     
-        <Text style={{marginLeft: 20, color: colors.txt, fontWeight: 'bold'}}>Hotels</Text>
+        <Text style={{alignSelf:'center', color: colors.txt, fontWeight: 'bold'}}>Hotels</Text>
     </View>
   );
 }
-
+const {width, height} =  Dimensions.get('window')
+const buttonWidth = scaleSize(100, width)
+const buttonHeight = scaleSize(45, height)
+const inputWidth = scaleSize(300, width)
+const inputHeight = scaleSize(60, height)
 const styles = StyleSheet.create({
-  container: { 
-    backgroundColor: '#fc0',
-    width: 80,
-    height:80,
-    justifyContent: 'center',
+  container: {
+    backgroundColor: 'maroon',
+    width: buttonWidth*.86,
+    height:buttonWidth*.86,
     alignItems: 'center',
+    justifyContent:'center',
     borderRadius: 7
   },
- 
 });
