@@ -2,12 +2,13 @@ import React from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text,Dimensions, StatusBar, Image, TouchableOpacity, Touchable } from 'react-native';
 import { useNavigation, useTheme } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+export const scaleSize = (size, width) => (width / 375) * size;
 const DATA = [
     {
         id: '1',
         title: 'Ambience Mall',
         uri: 'https://cabgurgaon.files.wordpress.com/2013/06/gurgaon-ambience-mall.jpg',
-        address: '144,MG Road,Rohtak,Haryana',
+        address: '144, MG Road, Rohtak, Haryana',
         contact: '9999999999',
         color1: 'orange',
         color2: 'orange',
@@ -96,16 +97,14 @@ const Shops = ({ props }) => {
     const navigation = useNavigation();
     const myColor = colors.txt
     const bookColor = colors.book
-    const Width = Dimensions.get('screen').width
-    const Height = Dimensions.get('screen').height
     return (
-        <SafeAreaView style={{ backgroundColor: colors.headerColor, marginBottom: 15 }}>
+        <SafeAreaView style={[styles.container,{backgroundColor: colors.headerColor}]}>
             <View >
                 <View style={{ backgroundColor: colors.headerColor, flexDirection: 'row', alignItems: 'center',}}>
                     <TouchableOpacity onPress={() => navigation.navigate("Explore")} style={{ backgroundColor: colors.headerColor, PaddingTop: 20 }}>
                         <Ionicons name="arrow-back" size={28} color={myColor} style={{ paddingLeft: 2, marginTop: 22 }} />
                     </TouchableOpacity>
-                    <Text style={{ color: colors.txt, marginLeft: '36%', fontSize: 24, marginTop: 19 }}>Shops</Text>
+                    <Text style={{ color: colors.txt, marginLeft: width*.35, fontSize: 24, marginTop: 19 }}>Shops</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <FlatList
@@ -113,11 +112,11 @@ const Shops = ({ props }) => {
                         renderItem={
                             ({ item }) => (
                                 <TouchableOpacity onPress={() => navigation.navigate("ShopsDetails", {id: item.id, uri: item.uri,reviews:item.reviews, title: item.title, address: item.address, color1: item.color1,color2: item.color2,color3: item.color3,color4: item.color4,color5: item.color5, des: item.des, contact :item.contact})}>
-                                    <View style={{ flexDirection: 'row', borderWidth: 2, margin: 10, borderColor: colors.txt, width: Width*.95,height:Height*.15, elevation: 2 }}>
-                                        <Image source={{ uri: item.uri }} style={{ width: Width*.29, height: Height*.145 }} />
-                                        <View style={{ flexDirection: 'column', marginLeft:5 }}>
+                                    <View style={{ flexDirection: 'row', borderWidth: 2, margin: 10, borderColor: colors.txt,width: buttonWidth,height:buttonWidth*.33, elevation: 2 }}>
+                                        <Image source={{ uri: item.uri }} style={{ width: buttonWidth*.33, height: buttonWidth*.32 }} />
+                                        <View style={{ flexDirection: 'column', marginLeft:5  ,width: buttonWidth*.60 }}>
                                             <Text style={{ color: colors.txt, fontSize: 20, fontWeight: 'bold' }}>{item.title}</Text>
-                                            <Text style={{ color: colors.txt, fontSize: 18, width:  Width*.65 }} ellipsizeMode="tail" numberOfLines={2}>{item.address}</Text>
+                                            <Text style={{ color: colors.txt, fontSize: 18,width: buttonWidth*.65 }} ellipsizeMode="tail" numberOfLines={2}>{item.address}</Text>
                                             <Text style={{ color: colors.txt, fontSize: 18 }}>{item.contact}</Text>
                                         </View>
                                         {/* <Ionicons name="ios-bookmark-outline" size={40} color={bookColor} style={{ position: 'absolute', }} /> */}
@@ -133,9 +132,17 @@ const Shops = ({ props }) => {
         </SafeAreaView>
     );
 }
+const {width, height} =  Dimensions.get('window')
+const buttonWidth = scaleSize(350, width)
+const buttonHeight = scaleSize(24, height)
+const inputWidth = scaleSize(305, width)
+const inputHeight = scaleSize(34, height)
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        width:width,
+        height: height,
+        alignItems: 'center',
+        // marginBottom:500
     },
     item: {
         backgroundColor: '#f9c2ff',
