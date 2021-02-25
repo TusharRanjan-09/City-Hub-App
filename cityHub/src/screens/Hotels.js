@@ -3,6 +3,7 @@ import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Image, Touch
 import { useNavigation, useTheme } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 export const scaleSize = (size, width) => (width / 375) * size;
+import {FONTSIZE} from '../utilities/font';
 const DATA = [
     {
         id: '1',
@@ -196,9 +197,9 @@ const Hotels = () => {
             <View >
                 <View style={{ backgroundColor: colors.headerColor, flexDirection: 'row', alignItems: 'center', }}>
                     <TouchableOpacity onPress={() => navigation.navigate("Explore")} style={{ backgroundColor: colors.headerColor, PaddingTop: 20 }}>
-                        <Ionicons name="arrow-back" size={28} color={myColor} style={{ paddingLeft: 2, marginTop: 22 }} />
+                        <Ionicons name="arrow-back" size={FONTSIZE.extra_mediu} color={myColor} style={{ paddingLeft: 2, marginTop: 22 }} />
                     </TouchableOpacity>
-                    <Text style={{ color: colors.txt, fontSize: 24, marginTop: 19, marginLeft: width*.35 }}>Hotels</Text>
+                    <Text style={{ color: colors.txt, fontSize: FONTSIZE.small_tiny , marginTop: 19, marginLeft: width*.35 }}>Hotels</Text>
                 </View>
                 <FlatList
                     data={DATA}
@@ -207,9 +208,9 @@ const Hotels = () => {
                             <View style={{ flexDirection: 'row', borderWidth: 2, margin: 10, borderColor: colors.txt,width: buttonWidth,height:buttonWidth*.33 }}>
                                 <Image source={{ uri: item.uri }} style={{ width: buttonWidth*.33, height: buttonWidth*.325 }} />
                                 <View style={{ flexDirection: 'column', marginHorizontal: 10, marginTop: 10, width: buttonWidth*.60 }}>
-                                    <Text style={{ color: colors.txt, fontSize: 20, fontWeight: 'bold' }}>{item.title}</Text>
-                                    <Text style={{ color: colors.txt, fontSize: 18,width: buttonWidth*.65 }} ellipsizeMode="tail" numberOfLines={2}>{item.address}</Text>
-                                    <Text style={{ color: colors.txt, fontSize: 18 }}>{item.contact}</Text>
+                                    <Text style={{ color: colors.txt, fontSize: FONTSIZE.regular, fontWeight: 'bold' }}>{item.title}</Text>
+                                    <Text style={{ color: colors.txt, fontSize: FONTSIZE.large,width: buttonWidth*.65 }} ellipsizeMode="tail" numberOfLines={2}>{item.address}</Text>
+                                    <Text style={{ color: colors.txt, fontSize: FONTSIZE.large }}>{item.contact}</Text>
                                 </View>
                                 {/* <Ionicons name="ios-bookmark-outline" size={40} color={bookColor} style={{position: 'absolute', marginLeft:330}} /> */}
                             </View>
