@@ -10,7 +10,7 @@ export default function SignUp({ navigation }) {
     return (
         <View style={styles.container}>
             <TouchableOpacity onPress={() => navigation.navigate("Login")} style={{position: 'absolute', top:2,left:5}}>
-                <Entypo name="cross" size={28} style={{ marginTop: width/20, paddingLeft: 2 }} />
+                <Entypo name="cross" size={32} style={{ marginTop: width/20, paddingLeft: 2 }} />
             </TouchableOpacity>
                         
                     <Text style={styles.txt}>Create an account</Text>
@@ -20,9 +20,9 @@ export default function SignUp({ navigation }) {
                         <Text style={styles.btntxt}>SIGN UP</Text>
                     </TouchableOpacity>
                     <View style={styles.tnc}>
-                        <Text style={{ fontSize: 15 }}>   By clicking Sign Up you agree to the following</Text>
+                        <Text style={{fontSize:FONTSIZE. regular_medium}}>   By clicking Sign Up you agree to the following</Text>
                         <TouchableOpacity style={{alignItems:'center'}}>
-                            <Text style={{ fontSize: 18, color: 'black', }}>Terms and Conditions</Text>
+                            <Text style={{ fontSize:FONTSIZE. regular_medium, color: 'black', }}>Terms and Conditions</Text>
                         </TouchableOpacity>
                     </View>
            
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     btntxt: {
         color: 'white',
         fontWeight: 'bold',
-        fontSize: 20
+        fontSize: FONTSIZE.extra_large
     },
     tnc: {
         marginTop:buttonHeight,

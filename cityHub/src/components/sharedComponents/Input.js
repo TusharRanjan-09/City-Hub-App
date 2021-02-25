@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View,TextInput,Dimensions } from 'react-native';
 export const scaleSize = (size, width) => (width / 375) * size;
+import {FONTSIZE} from '../../utilities/font';
 export default function Input(props) {
   return (
     <View >
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
         height:inputHeight, 
         borderBottomColor: 'lightgrey', 
         borderBottomWidth: 1, 
-        fontSize: 20  
+        fontSize: FONTSIZE.extra_large
     }
 });
 
