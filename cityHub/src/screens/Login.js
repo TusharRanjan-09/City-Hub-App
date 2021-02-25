@@ -2,8 +2,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput,Dimensions } from 'react-native';
-import Input from '../components/sharedComponents/Input';
-import SignUp from './SignUp';
 export const scaleSize = (size, width) => (width / 375) * size;
 
 export default function Login({ navigation }) {
