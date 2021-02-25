@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, TextInput, Switch } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, TextInput, Switch,Dimensions } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Feather from 'react-native-vector-icons/Feather';
 import { useNavigation, useTheme } from '@react-navigation/native';
 import { EventRegister } from 'react-native-event-listeners'
+export const scaleSize = (size, width) => (width / 375) * size;
 export default function Profile() {
   const navigation = useNavigation();
   const [isDarkTheme, setISDarkTheme]= useState(false);
@@ -17,7 +18,7 @@ export default function Profile() {
 //  setISDarkTheme(!isDarkTheme)
 // }
   return (
-    <View style={{flex: 1, backgroundColor: colors.iconColor}}>
+    <View style={[styles.container,{backgroundColor: colors.iconColor}]}>
       <View style={{ flex: 2.5, backgroundColor: colors.profile, borderBottomWidth: 1,borderBottomColor:'#f4f4f4', alignContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
         <FontAwesome5 name="user-circle" size={110} color={myColor} style={{ marginLeft: 30, marginTop: 10 }} />
         <View style={{ flexDirection: 'column' }}>
@@ -70,20 +71,20 @@ export default function Profile() {
           </View>
         </TouchableOpacity>
        
-        {/* <View style={styles.bottomDrawerSection}>
-<Text>hi</Text>
-        </View> */}
       </View>
 
     </View>
   );
 }
-
+const {width, height} =  Dimensions.get('window')
+const buttonWidth = scaleSize(305, width)
+const buttonHeight = scaleSize(24, height)
+const inputWidth = scaleSize(305, width)
+const inputHeight = scaleSize(34, height)
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    // backgroundColor: '#fff',
-
+   width:width,
+   height:height
   },
   bottomDrawerSection: {
     marginBottom: 15,
