@@ -9,8 +9,6 @@ export default function Explore() {
   const navigation = useNavigation();
   const { colors } = useTheme()
   const myColor = colors.iconColor
-  const Width = Dimensions.get('screen').width
-  // const Height = Dimensions.get('screen').height
   return (
     <View style={styles.container}>
       <View style={[styles.searchbar,{backgroundColor: colors.headerColor}]}>
@@ -33,7 +31,7 @@ const inputHeight = scaleSize(34, height)
 const styles = StyleSheet.create({
   container: {
     width: width,
-    // height: height,
+
     alignItems: 'center',
     justifyContent:'center',
     paddingTop:35
