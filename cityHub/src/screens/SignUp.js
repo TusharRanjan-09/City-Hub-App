@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, TouchableOpacity,Dimensions } from 'react-nativ
 import Input from '../components/sharedComponents/Input';
 import Entypo from 'react-native-vector-icons/Entypo';
 export const scaleSize = (size, width) => (width / 375) * size;
+import {FONTSIZE} from '../utilities/font';
 export default function SignUp({ navigation }) {
     const [tt, setTt] = useState({ email: 'Email', pass: 'Password', user: 'UserName' })
     return (
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
        justifyContent:'center'   
     },
     txt: {
-        fontSize: 39,
+        fontSize: FONTSIZE.larger,
         color: 'black',
         fontWeight: 'bold',
         marginBottom: buttonHeight

@@ -25,7 +25,7 @@ const ShopsDetails = (props) => {
                 <Text style={{ color: colors.txt,  marginLeft: buttonWidth*.28, fontSize: 24, marginTop: 19 }}>Shops Details</Text>
             </View>
             <View style={{ width: width, height:buttonWidth*1, elevation: 50, alignItems: 'center' }}>
-                <Image source={{ uri: props.route.params.uri }} style={{ width: width*.95, height: Height*.43, borderRadius: 10 }} />
+                <Image source={{ uri: props.route.params.uri }} style={{ width: width*.95, height: buttonWidth*.96, borderRadius: 10 }} />
             </View>
             <View style={{ width: width, height:buttonWidth*1, backgroundColor: colors.details, padding: 10,paddingBottom: 15}}>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>

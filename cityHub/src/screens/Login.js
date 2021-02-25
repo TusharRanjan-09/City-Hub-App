@@ -48,12 +48,12 @@ const styles = StyleSheet.create({
         justifyContent:'center'
     },
     input: {
-        fontSize: FONTSIZE.very_large,
+        fontSize: FONTSIZE.larger,
         fontWeight: 'bold',
         color: 'black',      
     },
     inputt: {
-        fontSize: FONTSIZE.very_large ,
+        fontSize: FONTSIZE.larger ,
         fontWeight: 'bold',
         color: 'black',          
     },

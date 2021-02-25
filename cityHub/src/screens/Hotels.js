@@ -205,7 +205,7 @@ const Hotels = () => {
                     renderItem={
                         ({ item }) => (<TouchableOpacity onPress={()=> navigation.navigate('Hotel', {id: item.id, uri: item.uri,reviews:item.reviews, title: item.title, address: item.address, color1: item.color1,color2: item.color2,color3: item.color3,color4: item.color4,color5: item.color5, customers: item.customers, cost: item.cost})}>
                             <View style={{ flexDirection: 'row', borderWidth: 2, margin: 10, borderColor: colors.txt,width: buttonWidth,height:buttonWidth*.33 }}>
-                                <Image source={{ uri: item.uri }} style={{ width: buttonWidth*.33, height: buttonWidth*.32  }} />
+                                <Image source={{ uri: item.uri }} style={{ width: buttonWidth*.33, height: buttonWidth*.325 }} />
                                 <View style={{ flexDirection: 'column', marginHorizontal: 10, marginTop: 10, width: buttonWidth*.60 }}>
                                     <Text style={{ color: colors.txt, fontSize: 20, fontWeight: 'bold' }}>{item.title}</Text>
                                     <Text style={{ color: colors.txt, fontSize: 18,width: buttonWidth*.65 }} ellipsizeMode="tail" numberOfLines={2}>{item.address}</Text>

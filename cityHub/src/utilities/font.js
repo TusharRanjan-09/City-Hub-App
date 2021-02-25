@@ -23,6 +23,8 @@ export const FONTSIZE = {
    large           : normalize(18),
    extra_large     : normalize(22),
    very_large      : normalize(42),
+   larger          : normalize(40),
+
 }
 
 export const FONTALIGNMENT = {
