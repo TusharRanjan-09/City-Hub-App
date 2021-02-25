@@ -3,12 +3,13 @@ import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Image, Touch
 import { useNavigation, useTheme } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 export const scaleSize = (size, width) => (width / 375) * size;
+import { FONTSIZE } from "../utilities/font";
 const DATA = [
     {
         id: '1',
         title: 'Fitness Club',
         uri: 'https://images.unsplash.com/photo-1607172611142-b800d035dc4b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
-        address: '144,MG Road,Rohtak,Haryana',
+        address: '144, MG Road, Rohtak, Haryana',
         contact: 'Ph no.- 9999999999'
     },
     {
@@ -63,19 +64,19 @@ const Gyms = () => {
                 <TouchableOpacity onPress={() => navigation.navigate("Explore")} style={{backgroundColor : colors.headerColor, PaddingTop:20}}>
                     <Ionicons name="arrow-back" size={28} color={myColor} style={{ paddingLeft: 2 , marginTop: 22}} />
                 </TouchableOpacity>
-                <Text style={{color: colors.txt, marginLeft : '36%', fontSize: 24, marginTop: 19}}>Gyms</Text>
+                <Text style={{color: colors.txt,marginLeft: width*.35, fontSize: FONTSIZE.small_tiny, marginTop: 19}}>Gyms</Text>
                 </View>              
                 <FlatList
                     data={DATA}
                     renderItem={
                         ({ item }) => (
                             <TouchableOpacity>
-                                <View style={{ flexDirection: 'row', borderWidth: 2, margin: 10, borderColor: colors.txt, elevation: 2,width: Width*.95,height:Height*.15 }}>
-                            <Image source={{ uri: item.uri }} style={{ width: Width*.29, height: Height*.145 }} />
-                            <View style={{ flexDirection: 'column', marginHorizontal: 10, marginTop: 10 }}>
-                                <Text style={{ color: colors.txt, fontSize: 20, fontWeight: 'bold' }}>{item.title}</Text>
-                                <Text style={{ color: colors.txt, fontSize: 18, width: Width*.65 }} ellipsizeMode="tail" numberOfLines={2}>{item.address}</Text>
-                                <Text style={{ color: colors.txt, fontSize: 18 }}>{item.contact}</Text>
+                                <View style={{ flexDirection: 'row', borderWidth: 2, margin: 10, borderColor: colors.txt, elevation: 2,width: buttonWidth,height:buttonWidth*.33 }}>
+                            <Image source={{ uri: item.uri }} style={{ width: buttonWidth*.33, height: buttonWidth*.326  }} />
+                            <View style={{ flexDirection: 'column', marginHorizontal: 10, marginTop: 10,width: buttonWidth*.60 }}>
+                                <Text style={{ color: colors.txt, fontSize: FONTSIZE.regular, fontWeight: 'bold' }}>{item.title}</Text>
+                                <Text style={{ color: colors.txt, fontSize: FONTSIZE.large, width: buttonWidth*.65 }} ellipsizeMode="tail" numberOfLines={2}>{item.address}</Text>
+                                <Text style={{ color: colors.txt, fontSize: FONTSIZE.large }}>{item.contact}</Text>
                             </View>
                             {/* <Ionicons name="ios-bookmark-outline" size={40} color={bookColor} style={{position: 'absolute', marginLeft:330}} /> */}
                             </View>
