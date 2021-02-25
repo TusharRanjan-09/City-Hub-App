@@ -5,6 +5,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { useNavigation, useTheme } from '@react-navigation/native';
 export const scaleSize = (size, width) => (width / 375) * size;
+import {FONTSIZE} from '../../utilities/font';
 export default function offerBanner() {
   const navigation = useNavigation()
   return (
@@ -15,8 +16,8 @@ export default function offerBanner() {
             style={{ width: buttonWidth*.95, height:buttonWidth*.6 }}
           />
           <View style={{position: 'absolute', top:buttonWidth*.285, alignItems:'center'}}>
-          <Text style={{ fontSize: 28, color: 'white', fontWeight: 'bold',  }}>Book Now!</Text>
-          <Text style={{ fontSize: 28, color: 'white', fontWeight: 'bold', }}>Starting at ₹ 799/-</Text>
+          <Text style={{ fontSize: FONTSIZE.extra_mediu, color: 'white', fontWeight: 'bold',  }}>Book Now!</Text>
+          <Text style={{ fontSize: FONTSIZE.extra_mediu, color: 'white', fontWeight: 'bold', }}>Starting at ₹ 799/-</Text>
           </View>
          
         </View>

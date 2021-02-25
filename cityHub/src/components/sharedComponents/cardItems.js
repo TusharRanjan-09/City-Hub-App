@@ -5,6 +5,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { useNavigation, useTheme } from '@react-navigation/native';
 export const scaleSize = (size, width) => (width / 375) * size;
+import {FONTSIZE} from '../../utilities/font';
 export default function cardItems() {
     const navigation = useNavigation();
     return (
@@ -14,7 +15,7 @@ export default function cardItems() {
                     <Image source={{ uri: 'https://imgcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2017/03/29132939/290317BanjaranMarket%40GGN13.jpg?w=1200&h=628&fill=blur&fit=fill' }}
                         style={{ width: inputWidth*.4, height: inputHeight, borderTopLeftRadius: 30, borderBottomLeftRadius: 30 , borderColor: 'black', borderWidth: 1}}
                     />
-                    <Text style={{ width: inputWidth*.55, fontSize: 17, color: 'white', margin: 5 }}>A big artefacts Market, at reasonable price, sector-56, Gurgaon</Text>
+                    <Text style={{ width: inputWidth*.55, fontSize: FONTSIZE.larg, color: 'white', margin: 5 }}>A big artefacts Market, at reasonable price, sector-56, Gurgaon</Text>
                 </View>
             </TouchableOpacity>
         </View>
