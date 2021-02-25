@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput,Dimensions } from 'react-native';
 export const scaleSize = (size, width) => (width / 375) * size;
-
+import {FONTSIZE} from '../utilities/font';
 export default function Login({ navigation }) {
     const [tt, setTt] = useState({ email: 'Username/Email', pass: 'Password' })
 
@@ -22,9 +22,9 @@ export default function Login({ navigation }) {
                 <Text style={styles.btntxt}>LOGIN</Text>
             </TouchableOpacity>
             <View style={{ flexDirection: 'row', marginTop: 150, justifyContent: 'center' }}>
-                <Text>Don't have an account?</Text>
+                <Text style={{fontSize:FONTSIZE. regular_medium }}>Don't have an account?</Text>
                 <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
-                    <Text style={{ color: 'black', fontWeight: 'bold' }}> Sign Up</Text>
+                    <Text style={{ color: 'black', fontWeight: 'bold',fontSize:FONTSIZE. regular_medium  }}> Sign Up</Text>
                 </TouchableOpacity>
             </View>
 
@@ -48,12 +48,12 @@ const styles = StyleSheet.create({
         justifyContent:'center'
     },
     input: {
-        fontSize: 42,
+        fontSize: FONTSIZE.very_large,
         fontWeight: 'bold',
         color: 'black',      
     },
     inputt: {
-        fontSize: 42,
+        fontSize: FONTSIZE.very_large ,
         fontWeight: 'bold',
         color: 'black',          
     },
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         left:buttonWidth*.25
     },
     txt: {
-        fontSize: 16,
+        fontSize: FONTSIZE.large ,
         color: '#4cb8ff',
         
     },
@@ -84,13 +84,13 @@ const styles = StyleSheet.create({
     btntxt: {
         color: 'white',
         fontWeight: 'bold',
-        fontSize: 20
+        fontSize: FONTSIZE.extra_large
     },
     txtinput: {
         width: inputWidth,
         height:inputHeight, 
         borderBottomColor: 'lightgrey', 
         borderBottomWidth: 1, 
-        fontSize: 20  
+        fontSize: FONTSIZE.extra_large
     }
 });
