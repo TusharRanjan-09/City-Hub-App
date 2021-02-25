@@ -28,7 +28,7 @@ const HotelDetails = (props) => {
             <View style={{ width: width, height:buttonWidth*1.2, backgroundColor: colors.details, padding: 15, borderTopLeftRadius: 40, borderTopRightRadius: 40 }}>
                <View style={{flexDirection: 'row', alignItems: 'center'}}>
                <Entypo name="location-pin" size={FONTSIZE.small} color={bookColor} />  
-               <Text style={{fontSize: 16, color: colors.txt}}>{props.route.params.address}</Text>
+               <Text style={{fontSize: FONTSIZE.larg, color: colors.txt}}>{props.route.params.address}</Text>
                </View>
                
                 <Text style={{ color: colors.txt, fontSize: FONTSIZE.very_larg, fontWeight: 'bold', marginBottom:5 }}>{props.route.params.title}</Text>
@@ -48,7 +48,7 @@ const HotelDetails = (props) => {
                </View>
                <View style={{flexDirection: 'column'}}>
                <Ionicons name="people" size={FONTSIZE.extra_mediu} color={myColor} style={{ paddingLeft: 2, marginTop: 10 }} />
-                   <Text style={{width: 170, color: colors.txt, fontSize: 18}}>Happy Customers Every year</Text>
+                   <Text style={{width: 170, color: colors.txt, fontSize: FONTSIZE.large}}>Happy Customers Every year</Text>
                    <Text style={{color:colors.book, fontSize :FONTSIZE.regular}}>{props.route.params.customers}</Text>
                </View>
                </View>
