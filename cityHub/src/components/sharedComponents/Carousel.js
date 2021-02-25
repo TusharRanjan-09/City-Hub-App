@@ -36,6 +36,7 @@ export default function Carousel({navigation}) {
                   <IconCategory/>
                   <IconCategory/>
                   <IconCategory/>
+                  <IconCategory/>
                 </ScrollView>
                 <Text style={{fontSize: 32,color: colors.txt,fontWeight: 'bold',paddingHorizontal: 20,paddingTop: 5,paddingBottom: 5}}>Offers</Text>
                 <ScrollView horizontal={true}>
