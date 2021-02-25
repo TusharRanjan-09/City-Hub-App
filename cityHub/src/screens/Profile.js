@@ -8,6 +8,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import { useNavigation, useTheme } from '@react-navigation/native';
 import { EventRegister } from 'react-native-event-listeners'
 export const scaleSize = (size, width) => (width / 375) * size;
+import { FONTSIZE } from "../utilities/font";
 export default function Profile() {
   const navigation = useNavigation();
   const [isDarkTheme, setISDarkTheme]= useState(false);
@@ -20,31 +21,31 @@ export default function Profile() {
   return (
     <View style={[styles.container,{backgroundColor: colors.iconColor}]}>
       <View style={{ flex: 2.5, backgroundColor: colors.profile, borderBottomWidth: 1,borderBottomColor:'#f4f4f4', alignContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-        <FontAwesome5 name="user-circle" size={110} color={myColor} style={{ marginLeft: 30, marginTop: 10 }} />
+        <FontAwesome5 name="user-circle" size={FONTSIZE.big} color={myColor} style={{ marginLeft: 30, marginTop: 10 }} />
         <View style={{ flexDirection: 'column' }}>
-          <Text style={{ marginHorizontal: 20, fontSize: 26, color: colors.txt, fontWeight: 'bold' }}>Tushar Ranjan</Text>
-          <Text style={{ marginHorizontal: 23, fontSize: 20, color: 'darkgrey', }}>@itzTushar</Text>
-          <Text style={{ marginHorizontal: 23, fontSize: 20, color: 'darkgrey', }}>user@gmail.com</Text>
+          <Text style={{ marginHorizontal: 20, fontSize: FONTSIZE.small_medium, color: colors.txt, fontWeight: 'bold' }}>Tushar Ranjan</Text>
+          <Text style={{ marginHorizontal: 23, fontSize: FONTSIZE.regular, color: 'darkgrey', }}>@itzTushar</Text>
+          <Text style={{ marginHorizontal: 23, fontSize: FONTSIZE.regular, color: 'darkgrey', }}>user@gmail.com</Text>
         </View>
 
       </View>
       <View style={{ flex: 7.5,backgroundColor: colors.profile}}>
         <TouchableOpacity style={{margin: 10, paddingTop:10}}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <MaterialIcons name='book-online' size={32} color={myColor} />
-            <Text style={{fontSize: 15, color :colors.txt, marginHorizontal:10}}>My Bookings</Text>
+            <MaterialIcons name='book-online' size={FONTSIZE.small} color={myColor} />
+            <Text style={{fontSize: FONTSIZE.medium, color :colors.txt, marginHorizontal:10}}>My Bookings</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={{margin: 10}}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <MaterialIcons name='bookmark-border' size={32} color={myColor} />
-            <Text style={{fontSize: 15, color :colors.txt, marginHorizontal:10}}>Bookmarks</Text>
+            <MaterialIcons name='bookmark-border' size={FONTSIZE.small} color={myColor} />
+            <Text style={{fontSize: FONTSIZE.medium, color :colors.txt, marginHorizontal:10}}>Bookmarks</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={{margin: 10}}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <Feather name='settings' size={32} color={myColor} />
-            <Text style={{fontSize: 15, color :colors.txt, marginHorizontal:10}}>Settings</Text>
+            <Feather name='settings' size={FONTSIZE.small} color={myColor} />
+            <Text style={{fontSize: FONTSIZE.medium, color :colors.txt, marginHorizontal:10}}>Settings</Text>
           </View>
         </TouchableOpacity>
         <View style={{margin: 10, paddingLeft:2,borderTopWidth: 1,borderTopColor:'#f4f4f4',}}
@@ -52,8 +53,8 @@ export default function Profile() {
         >
           <View style={{ flexDirection: 'row', alignItems: 'center', marginTop:10,justifyContent: 'space-between', }}>
             
-            <Text style={{fontSize: 15, color :colors.txt, marginHorizontal:10}}>Dark Theme</Text>
-         <Text style={{color: colors.txt }}>{isDarkTheme ? "ON" : "OFF"}</Text>
+            <Text style={{fontSize: FONTSIZE.medium, color :colors.txt, marginHorizontal:10}}>Dark Theme</Text>
+         <Text style={{color: colors.txt,fontSize: FONTSIZE.medium }}>{isDarkTheme ? "ON" : "OFF"}</Text>
           <Switch value={isDarkTheme}
            onValueChange={val => {
             setISDarkTheme(val);
@@ -66,8 +67,8 @@ export default function Profile() {
         onPress={() => navigation.navigate("Login")}
         >
           <View style={{ flexDirection: 'row', alignItems: 'center', marginTop:10 }}>
-            <MaterialCommunityIcons name='logout' size={32} color={myColor} />
-            <Text style={{fontSize: 15, color :colors.txt, marginHorizontal:10}}>Sign Out</Text>
+            <MaterialCommunityIcons name='logout' size={FONTSIZE.small} color={myColor} />
+            <Text style={{fontSize: FONTSIZE.medium, color :colors.txt, marginHorizontal:10}}>Sign Out</Text>
           </View>
         </TouchableOpacity>
        

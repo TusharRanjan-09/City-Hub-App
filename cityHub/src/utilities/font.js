@@ -29,7 +29,8 @@ export const FONTSIZE = {
    very_large      : normalize(42),
    larger          : normalize(40),
    largest         : normalize(36),
-
+   big             : normalize(110),
+   
 
 }
 
