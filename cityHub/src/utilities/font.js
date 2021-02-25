@@ -15,7 +15,7 @@ export const FONTSIZE = {
    tiny            : normalize(8),
    small_tiny      : normalize(9),
    small_medium    : normalize(10),
-   small           : normalize(11),
+   small           : normalize(32),
    regular         : normalize(20),
    regular_medium  : normalize(14),
    medium          : normalize(15),
